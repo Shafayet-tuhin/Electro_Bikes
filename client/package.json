@@ -1,0 +1,46 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@stripe/react-stripe-js": "^2.8.0",
+    "@stripe/stripe-js": "^4.4.0",
+    "@tanstack/react-query": "^5.53.1",
+    "axios": "^1.7.6",
+    "firebase": "^10.13.0",
+    "highcharts": "^11.4.8",
+    "highcharts-react-official": "^3.2.1",
+    "rc-slider": "^11.1.5",
+    "react": "^18.2.0",
+    "react-compare-image": "^3.4.0",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
+    "react-icons": "^5.3.0",
+    "react-minimal-pie-chart": "^8.4.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.26.1",
+    "sweetalert2": "^11.6.13"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.10",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10",
+    "vite": "^5.0.8"
+  }
+}

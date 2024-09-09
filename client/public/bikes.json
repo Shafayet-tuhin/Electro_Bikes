@@ -1,0 +1,272 @@
+[
+    {
+        "name": "EcoRide 250",
+        "details": "A compact and efficient e-bike for city commutes.",
+        "rating": 4.5,
+        "price": 899,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/c/o/commute1.png",
+        "category": "comfort",
+        "specifications": ["250W motor", "36V battery", "7-speed Shimano gears", "Up to 30 miles range"]
+    },
+    {
+        "name": "FoldX Mini",
+        "details": "A lightweight folding e-bike, perfect for urban mobility.",
+        "rating": 4.2,
+        "price": 750,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/s/w/swiftylibertepink1.jpg",
+        "category": "folding",
+        "specifications": ["250W motor", "14Ah battery", "Foldable frame", "20-inch wheels", "Up to 25 miles range"]
+    },
+    {
+        "name": "TrailBlazer Pro",
+        "details": "High-performance e-bike designed for light trail adventures.",
+        "rating": 4.7,
+        "price": 1299,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/q/d/qdos_black1.png",
+        "category": "light trail",
+        "specifications": ["500W motor", "48V battery", "Front suspension", "Hydraulic disc brakes", "Up to 40 miles range"]
+    },
+    {
+        "name": "Mountain King X5",
+        "details": "A full suspension e-bike for conquering tough terrains.",
+        "rating": 4.8,
+        "price": 1899,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/m/a/mantra.jpeg",
+        "category": "full suspension",
+        "specifications": ["750W motor", "48V battery", "Full suspension", "29-inch wheels", "Up to 45 miles range"]
+    },
+    {
+        "name": "Urban Cruiser 3000",
+        "details": "Comfortable and stylish, designed for city rides.",
+        "rating": 4.4,
+        "price": 1100,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/m/a/mantra.jpeg",
+        "category": "comfort",
+        "specifications": ["300W motor", "36V battery", "Step-through frame", "LED lights", "Up to 35 miles range"]
+    },
+    {
+        "name": "CompactFold E1",
+        "details": "Easy to carry and store, a versatile folding e-bike.",
+        "rating": 4.1,
+        "price": 680,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/f/l/fly.jpeg",
+        "category": "folding",
+        "specifications": ["250W motor", "10Ah battery", "Quick folding", "Alloy frame", "Up to 20 miles range"]
+    },
+    {
+        "name": "TrailExplorer Lite",
+        "details": "Lightweight e-bike for exploring nature trails.",
+        "rating": 4.3,
+        "price": 1050,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/i/n/infusion_monochrome1.png",
+        "category": "light trail",
+        "specifications": ["350W motor", "36V battery", "Suspension fork", "21-speed gears", "Up to 35 miles range"]
+    },
+    {
+        "name": "RockMaster 700",
+        "details": "A rugged full suspension e-bike for extreme riding.",
+        "rating": 4.9,
+        "price": 2200,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/7/1/71htd0bcasl._ac_sl1500_.jpg",
+        "category": "full suspension",
+        "specifications": ["1000W motor", "52V battery", "Dual suspension", "27.5-inch wheels", "Up to 60 miles range"]
+    },
+    {
+        "name": "CityRide 200",
+        "details": "Economical and reliable e-bike for daily commutes.",
+        "rating": 4.0,
+        "price": 580,
+        "image": "https://ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/r/e/regency_grey.jpeg",
+        "category": "comfort",
+        "specifications": ["200W motor", "24V battery", "Low-step frame", "V-brakes", "Up to 15 miles range"]
+    },
+    {
+        "name": "PocketFold Z2",
+        "details": "Ultra-portable folding e-bike, ideal for short trips.",
+        "rating": 3.9,
+        "price": 520,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/s/w/swift-grey.png",
+        "category": "folding",
+        "specifications": ["200W motor", "8Ah battery", "Compact fold", "16-inch wheels", "Up to 18 miles range"]
+    },
+    {
+        "name": "TrailLite 300",
+        "details": "Efficient e-bike for light off-road adventures.",
+        "rating": 4.3,
+        "price": 970,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/p/a/patriot_grey_soft_white_bg.png",
+        "category": "light trail",
+        "specifications": ["300W motor", "36V battery", "Front suspension", "9-speed gears", "Up to 30 miles range"]
+    },
+    {
+        "name": "AllTerrain 900",
+        "details": "Durable full suspension e-bike for any terrain.",
+        "rating": 4.7,
+        "price": 1950,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/d/a/dark_gray_on_white_bg.png",
+        "category": "full suspension",
+        "specifications": ["800W motor", "48V battery", "Full suspension", "Tubeless tires", "Up to 50 miles range"]
+    },
+    {
+        "name": "MetroCommuter 500",
+        "details": "Ideal e-bike for city commuting with extra comfort.",
+        "rating": 4.2,
+        "price": 950,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/s/w/swift-blue-white.png",
+        "category": "comfort",
+        "specifications": ["250W motor", "36V battery", "Adjustable handlebar", "Rack and fenders", "Up to 28 miles range"]
+    },
+    {
+        "name": "QuickFold Pro",
+        "details": "Fast-folding e-bike, great for commuters.",
+        "rating": 4.0,
+        "price": 790,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/e/v/everett-plus-womens-ebike-e4870-2.jpg",
+        "category": "folding",
+        "specifications": ["300W motor", "12Ah battery", "Quick fold", "Adjustable seat", "Up to 22 miles range"]
+    },
+    {
+        "name": "NatureExplorer 350",
+        "details": "Perfect for nature trails, combining comfort and power.",
+        "rating": 4.5,
+        "price": 1150,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/e/v/everett-side-view.jpg",
+        "category": "light trail",
+        "specifications": ["400W motor", "48V battery", "Alloy frame", "Hydraulic brakes", "Up to 38 miles range"]
+    },
+    {
+        "name": "AdventureMax X2",
+        "details": "High-end full suspension e-bike for serious adventurers.",
+        "rating": 4.8,
+        "price": 2500,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/e/-/e-trends_city_bike-full_view_right_side_1600x_1.jpeg",
+        "category": "full suspension",
+        "specifications": ["1200W motor", "52V battery", "Advanced suspension", "High-speed mode", "Up to 70 miles range"]
+    },
+    {
+        "name": "CityComfort Deluxe",
+        "details": "Luxury e-bike with enhanced comfort features.",
+        "rating": 4.6,
+        "price": 1300,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/b/e/beacon_2.jpg",
+        "category": "comfort",
+        "specifications": ["350W motor", "48V battery", "Comfort seat", "Integrated lights", "Up to 40 miles range"]
+    },
+    {
+        "name": "SlimFold Compact",
+        "details": "Super slim folding e-bike, perfect for tight spaces.",
+        "rating": 4.1,
+        "price": 640,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/f/a/falcon-crest-electric-folding-bike-p211-1783_image_1.jpeg",
+        "category": "folding",
+        "specifications": ["250W motor", "10Ah battery", "Slim profile", "Lightweight", "Up to 20 miles range"]
+    },
+    {
+        "name": "TrailRunner Pro",
+        "details": "Built for trails, offering power and agility.",
+        "rating": 4.4,
+        "price": 1200,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/d/a/dawes-arc-ii-electric-folding-bike-p216-4752_image.jpeg",
+        "category": "light trail",
+        "specifications": ["450W motor", "48V battery", "Durable frame", "All-terrain tires", "Up to 42 miles range"]
+    },
+    {
+        "name": "PowerTrail Elite",
+        "details": "Top-tier full suspension e-bike for ultimate performance.",
+        "rating": 4.9,
+        "price": 2700,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/e/v/evo_side_square.jpg",
+        "category": "full suspension",
+        "specifications": ["1500W motor", "60V battery", "Elite suspension system", "High-capacity battery", "Up to 80 miles range"]
+    },
+    {
+        "name": "ComfortRider 600",
+        "details": "Smooth riding e-bike with comfort-focused features.",
+        "rating": 4.5,
+        "price": 1050,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/l/e/legacy_cream_1.jpeg",
+        "category": "comfort",
+        "specifications": ["300W motor", "36V battery", "Comfortable saddle", "Easy handling", "Up to 33 miles range"]
+    },
+    {
+        "name": "QuickFold X1",
+        "details": "Compact and efficient folding e-bike for city travel.",
+        "rating": 4.0,
+        "price": 720,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/l/e/legacy_burgundy.jpeg",
+        "category": "folding",
+        "specifications": ["250W motor", "9Ah battery", "Quick folding", "Durable construction", "Up to 19 miles range"]
+    },
+    {
+        "name": "TrailHunter 500",
+        "details": "Robust e-bike designed for light trails and rugged paths.",
+        "rating": 4.2,
+        "price": 980,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/p/e/peak_blue.jpeg",
+        "category": "light trail",
+        "specifications": ["350W motor", "36V battery", "Rugged design", "Mountain bike tires", "Up to 36 miles range"]
+    },
+    {
+        "name": "EnduroPro FS",
+        "details": "Advanced full suspension e-bike for extreme terrains.",
+        "rating": 4.8,
+        "price": 2300,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/p/e/peak.jpeg",
+        "category": "full suspension",
+        "specifications": ["1000W motor", "48V battery", "Premium suspension", "High-traction tires", "Up to 65 miles range"]
+    },
+    {
+        "name": "CityLite 250",
+        "details": "Lightweight and simple e-bike for daily commutes.",
+        "rating": 3.8,
+        "price": 600,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/s/w/swift_mint.png",
+        "category": "comfort",
+        "specifications": ["250W motor", "24V battery", "Light frame", "Simple controls", "Up to 20 miles range"]
+    },
+    {
+        "name": "Compact Cruiser",
+        "details": "Folding e-bike that balances portability and power.",
+        "rating": 4.1,
+        "price": 800,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/f/a/falcon-turbine-electric-mountain-bike-p213-1787_image.jpeg",
+        "category": "folding",
+        "specifications": ["250W motor", "12Ah battery", "Easy folding mechanism", "Versatile design", "Up to 25 miles range"]
+    },
+    {
+        "name": "TrailKing X3",
+        "details": "E-bike that brings the power to light trail riding.",
+        "rating": 4.6,
+        "price": 1300,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/p/a/pathfinder-ladies.jpg",
+        "category": "light trail",
+        "specifications": ["500W motor", "48V battery", "Strong frame", "High-grip tires", "Up to 40 miles range"]
+    },
+    {
+        "name": "MountainMaster Pro",
+        "details": "The ultimate full suspension e-bike for mountain adventures.",
+        "rating": 4.9,
+        "price": 2600,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/p/a/pathfinder-mens_1.png",
+        "category": "full suspension",
+        "specifications": ["1200W motor", "52V battery", "Full suspension", "High-performance brakes", "Up to 75 miles range"]
+    },
+    {
+        "name": "ComfortGlide 800",
+        "details": "Premium e-bike with features focused on rider comfort.",
+        "rating": 4.6,
+        "price": 1400,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/c/o/coniston_bw.jpeg",
+        "category": "comfort",
+        "specifications": ["350W motor", "48V battery", "Ergonomic design", "Padded seat", "Up to 45 miles range"]
+    },
+    {
+        "name": "QuickFold Max",
+        "details": "A powerful folding e-bike, perfect for on-the-go riders.",
+        "rating": 4.2,
+        "price": 950,
+        "image": "https://www.ebikes.co.uk/media/catalog/product/cache/5b9149b7d5b82a453bd9f7f34b9c15a8/l/i/li-fe-force-electric-folding-bike-p256-595_image.jpeg",
+        "category": "folding",
+        "specifications": ["350W motor", "14Ah battery", "Sturdy foldable frame", "Alloy construction", "Up to 28 miles range"]
+    }
+]
