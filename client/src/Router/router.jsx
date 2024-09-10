@@ -12,6 +12,8 @@ import MyCart from "../DashBoard/My Cart/MyCart";
 import Favorites from "../DashBoard/Favorites/Favorites";
 import Payment from "../DashBoard/Payment/Payment";
 import PaymentHistory from "../DashBoard/Payment/PaymentHistoy";
+import AllUsers from "../DashBoard/All Users/AllUsers";
+import ManageItems from "../DashBoard/Manage Items/ManageItems";
 
 
 export const router = createBrowserRouter([
@@ -69,6 +71,14 @@ export const router = createBrowserRouter([
             {
                 path:'history' ,
                 element:<PaymentHistory/>
+            },
+            {
+                path:'allusers',
+                element:<AllUsers/>
+            },
+            {
+                path:'manageitems',
+                element:<ManageItems/>
             }
         ]
     }

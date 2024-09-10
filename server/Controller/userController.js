@@ -38,3 +38,17 @@ exports.getUsers = async (req , res ) => {
         res.status(500).json({ error: error.message })
     }
 }
+
+
+exports.updateRole = async (req , res ) => {
+    try{
+        const id = req.params.id
+        const newRole = req.body.role
+        const result = await User.findByIdAndUpdate(id , {role : newRole} , {new : true})
+        res.json({acknowledged : true })
+    }
+    catch (error) {
+        res.status(500).json({ error: error.message })
+    }
+}
+

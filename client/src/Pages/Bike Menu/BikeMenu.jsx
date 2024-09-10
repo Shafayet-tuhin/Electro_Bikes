@@ -4,6 +4,7 @@ import SingleEbike from '../Shared/Ebikes/SingleEbike';
 import { useNavigate } from 'react-router-dom';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css'; 
+import useBikes from '../../Hooks/useBikes';
 
 const BikeMenu = () => {
     const [drop, setDrop] = useState(false);
@@ -12,9 +13,10 @@ const BikeMenu = () => {
     const [priceRange, setPriceRange] = useState([0, 2700]); 
     const [sortOption, setSortOption] = useState(''); 
     const navigate = useNavigate();
-    const { BikeData } = useContext(AuthContext);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 14;
+
+    const [Bikes , loading , refetch] = useBikes()
 
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
@@ -40,7 +42,7 @@ const BikeMenu = () => {
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 
     
-    let filteredItems = BikeData.filter((item) => {
+    let filteredItems = Bikes.filter((item) => {
         const matchesCategory = selectedCategory ? item.category === selectedCategory : true;
         const matchesSearch = searchTerm ? item.name.toLowerCase().includes(searchTerm.toLowerCase()) : true;
         const matchesPrice = item.price >= priceRange[0] && item.price <= priceRange[1];
@@ -185,7 +187,7 @@ const BikeMenu = () => {
                         />
                         {drop && (
                             <div className="absolute top-full mt-2 w-full lg:w-3/4 z-50 bg-white shadow-lg rounded-lg max-h-60 overflow-y-auto">
-                                {BikeData.filter((item) =>
+                                {Bikes.filter((item) =>
                                     item.name.toLowerCase().includes(searchTerm.toLowerCase())
                                 ).map((item) => (
                                     <div

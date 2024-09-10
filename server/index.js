@@ -15,6 +15,7 @@ const UserRoute = require('./Router/userRouter.js')
 const CartRoute = require('./Router/cartRouter.js')
 const FavRoute = require('./Router/favorite.js')
 const PayRoute = require('./Router/paymentRoute.js')
+const stripeRouter = require('./Router/striperouter.js')
 
 const DB_ID = process.env.DB_ID 
 const DB_PASS = process.env.DB_PASS
@@ -45,26 +46,8 @@ app.use('/users', UserRoute)
 app.use('/cart', CartRoute)
 app.use('/favorites', FavRoute)
 app.use('/payment', PayRoute)
+app.post("/create-payment-intent", stripeRouter)
 
-app.post("/create-payment-intent", async (req, res) => {
-  try {
-      const { price } = req.body;
-      const amount = Math.round(price * 100); // converting to cents and rounding
-
-      const paymentIntent = await stripe.paymentIntents.create({
-          amount: amount,
-          currency: "usd",
-          payment_method_types: ['card'],
-      });
-
-      res.send({ 
-          clientSecret: paymentIntent.client_secret,
-      });
-  } catch (error) {
-      console.error("Error creating payment intent:", error);
-      res.status(500).send({ error: 'Failed to create payment intent' });
-  }
-});
 
 
 app.listen(port, () => {

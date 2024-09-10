@@ -28,3 +28,13 @@ exports.getSingleBike = async (req, res) => {
         res.status(500).json({ message: error.message })
     }
 }
+
+exports.deleteBike = async (req, res) => {
+    try {
+        const id = req.params.id
+        const result = await Bike.findByIdAndDelete(id);
+        res.json({ acknowledged: true });
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+}
