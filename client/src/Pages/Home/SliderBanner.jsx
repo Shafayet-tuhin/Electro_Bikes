@@ -17,7 +17,7 @@ const SliderBanner = () => {
         infiniteLoop={true} 
         interval={2500} 
         showThumbs={true} // Hide thumbnail previews
-        showStatus={true} // Hide status indicator
+        showStatus={false} // Hide status indicator
         width="90%" // Adjust width if necessary
         dynamicHeight={true} 
         style={{ maxHeight: '300px', overflow: 'hidden' }} // Set max height for the carousel

@@ -29,12 +29,12 @@ const FAQ = () => {
       <p className='text-[#667085] mt-5 lg:w-[40rem] mx-auto font-normal text-base leading-6 text-center font-abc'>
         Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups.
       </p>
-      <div className='mt-8 max-w-3xl mx-auto'>
+      <div className='mt-8 max-w-3xl px-5 lg:px-0 mx-auto'>
         {faqs.map((faq, index) => (
           <div key={index} className='mb-4 border-b'>
             <button
               onClick={() => toggleOpen(index)}
-              className='flex justify-between items-center w-full py-4 text-left font-medium font-abc text-lg'
+              className='flex justify-between items-center w-full py-4 text-left font-medium font-abc text-sm lg:text-lg'
             >
               {faq.question}
               {open === index ? <FaMinus className="text-[#14C9C9]" /> : <FaPlus className="text-[#14C9C9] animate-pulse" />}
@@ -42,7 +42,7 @@ const FAQ = () => {
             <div
               className={`overflow-hidden transition-all duration-300 ${open === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
             >
-              <div className='px-4 py-2 text-base font-abc text-[#667085]'>
+              <div className='px-4 py-2 lg:text-base text-xs font-abc text-[#667085]'>
                 {faq.answer}
               </div>
             </div>

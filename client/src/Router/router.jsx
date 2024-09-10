@@ -14,71 +14,83 @@ import Payment from "../DashBoard/Payment/Payment";
 import PaymentHistory from "../DashBoard/Payment/PaymentHistoy";
 import AllUsers from "../DashBoard/All Users/AllUsers";
 import ManageItems from "../DashBoard/Manage Items/ManageItems";
+import UpdateItems from "../DashBoard/Manage Items/Updateitems";
+import AddBikes from "../DashBoard/Manage Items/AddBikes";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Layout/>,
-        children:[
+        element: <Layout />,
+        children: [
             {
                 path: "/",
-                element: <Home/>,
+                element: <Home />,
             },
             {
-               path:'/bikeSpecs/:id',
-               element:<BikeSpecs/>,
-               loader:({params}) => fetch(`http://localhost:3000/bikes/${params.id}`)
+                path: '/bikeSpecs/:id',
+                element: <BikeSpecs />,
+                loader: ({ params }) => fetch(`http://localhost:3000/bikes/${params.id}`)
             },
             {
-                path:'/menu' ,
-                element:<BikeMenu/>
+                path: '/menu',
+                element: <BikeMenu />
             },
             {
-                path:'/login' ,
-                element: <Login/>
+                path: '/login',
+                element: <Login />
             },
             {
-                path:'/register' ,
-                element: <Register/>
+                path: '/register',
+                element: <Register />
             },
             {
-               path:'/contact' ,
-               element: <Contact/>
+                path: '/contact',
+                element: <Contact />
             }
         ]
     },
     {
-        path:"dashboard" ,
-        element: <DashboardLayout/>,
-        children:[
+        path: "dashboard",
+        element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
+        children: [
             {
-                path:"home" ,
-                element:<DashBoardHome/>
+                path: "home",
+                element: <DashBoardHome />
             },
             {
-                path:'mycart',
-                element:<MyCart/>
+                path: 'mycart',
+                element: <MyCart />
             },
             {
-                path:'favorites' ,
-                element:<Favorites/>
+                path: 'favorites',
+                element: <Favorites />
             },
             {
-                path:'payment',
-                element:<Payment/>
+                path: 'payment',
+                element: <Payment />
             },
             {
-                path:'history' ,
-                element:<PaymentHistory/>
+                path: 'history',
+                element: <PaymentHistory />
             },
             {
-                path:'allusers',
-                element:<AllUsers/>
+                path: 'allusers',
+                element: <AllUsers />
             },
             {
-                path:'manageitems',
-                element:<ManageItems/>
+                path: 'manageitems',
+                element: <ManageItems />
+            },
+            {
+                path: 'updateitems/:id',
+                element: <UpdateItems /> ,
+                loader: ({ params }) => fetch(`http://localhost:3000/bikes/${params.id}`)
+            },
+            {
+                path:'additem',
+                element : <AddBikes/>
             }
         ]
     }

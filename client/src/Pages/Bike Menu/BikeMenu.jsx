@@ -179,7 +179,7 @@ const BikeMenu = () => {
                         <input
                             type="text"
                             placeholder="Search Bikes Here"
-                            className="input input-bordered w-full lg:w-3/4 text-center"
+                            className="input input-bordered w-1/2 lg:w-3/4 text-center"
                             value={searchTerm}
                             onChange={handleInputChange}
                             onFocus={() => setDrop(searchTerm.length > 0)}
@@ -208,7 +208,7 @@ const BikeMenu = () => {
                     </div>
 
                     
-                    <div className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 gap-4 lg:mt-12">
+                    <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-3 gap-4 lg:mt-12">
                         {currentItems.length > 0 ? (
                             currentItems.map((item) => (
                                 <SingleEbike key={item._id} item={item} />

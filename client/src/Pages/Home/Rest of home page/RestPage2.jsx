@@ -36,24 +36,24 @@ const RestPage2 = () => {
             </div>
 
 
-            <div className='grid lg:grid-cols-3 text-center justify-between items-center gap-16 px-[7.5rem] py-[6rem]'>
+            <div className='grid grid-cols-3  text-center justify-between items-center lg:gap-16 gap-4 lg:px-[7.5rem] py-[6rem]'>
                 <div className='flex flex-col '>
-                    <p className='text-[#14C9C9] font-semibold text-5xl leading-[3.5rem] mb-5'>3000+</p>
-                    <p className='text-2xl font-semibold leading-8 mb-2'>Test Rides</p>
-                    <p className='text-[#667085] font-normal leading-6 text-base'>We offer emission-free local travel, Not only doing something good for yourself, but also for everyone else.</p>
+                    <p className='text-[#14C9C9] font-semibold lg:text-5xl text-3xl mb-2  lg:leading-[3.5rem] lg:mb-5'>3000+</p>
+                    <p className='lg:text-2xl font-semibold lg:leading-8 lg:mb-2 mb-1'>Test Rides</p>
+                    <p className='text-[#667085] font-normal lg:leading-6 lg:text-base text-xs'>We offer emission-free local travel, Not only doing something good for yourself, but also for everyone else.</p>
+                </div>
+                <div className='flex flex-col '>
+                    <p className='text-[#14C9C9] font-semibold lg:text-5xl text-3xl mb-2  lg:leading-[3.5rem] lg:mb-5'>3000+</p>
+                    <p className='lg:text-2xl font-semibold lg:leading-8 lg:mb-2 mb-1'>Repairs</p>
+                    <p className='text-[#667085] font-normal lg:leading-6 lg:text-base text-xs'>Simply bock using our super app, chose your destination, jump in to our nearby services and wheedle only.</p>
+                </div>
+                <div className='flex flex-col '>
+                    <p className='text-[#14C9C9] font-semibold lg:text-5xl text-3xl mb-2  lg:leading-[3.5rem] lg:mb-5'>38700+</p>
+                    <p className='lg:text-2xl font-semibold lg:leading-8 lg:mb-2 mb-1'>Miles smile</p>
+                    <p className='text-[#667085] font-normal lg:leading-6 lg:text-base text-xs'>Know your travel octet's in advance then you can simply pay it using our super apps or choose another method.</p>
                 </div>
 
-                <div className='flex flex-col '>
-                    <p className='text-[#14C9C9] font-semibold text-5xl leading-[3.5rem] mb-5'>127</p>
-                    <p className='text-2xl font-semibold leading-8 mb-2'>Repairs</p>
-                    <p className='text-[#667085] font-normal leading-6 text-base'>Simply bock using our super app, chose your destination, jump in to our nearby services and wheedle only.</p>
-                </div>
-
-                <div className='flex flex-col '>
-                    <p className='text-[#14C9C9] font-semibold text-5xl leading-[3.5rem] mb-5'>38700</p>
-                    <p className='text-2xl font-semibold leading-8 mb-2'>Miles of smiles</p>
-                    <p className='text-[#667085] font-normal leading-6 text-base'>Know your travel octet's in advance then you can simply pay it using our super apps or choose another method.</p>
-                </div>
+               
             </div>
 
             {/* <div className='relative bg-[url("./assets/Rest/banner.jpg")] bg-cover bg-center rounded-2xl'>

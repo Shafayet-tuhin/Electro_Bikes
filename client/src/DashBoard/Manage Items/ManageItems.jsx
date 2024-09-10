@@ -68,8 +68,8 @@ const ManageItems = () => {
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Food</th>
-                            <th>Item Name</th>
+                            <th>Picture</th>
+                            <th>Bike Name</th>
                             <th>Category</th>
                             <th>Price</th>
                             <th>Edit</th>

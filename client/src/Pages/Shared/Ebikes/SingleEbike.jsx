@@ -17,7 +17,6 @@ const SingleEbike = ({ item }) => {
     const [isLoading, fav, refetchFavorites] = useFav()
 
     const hadnleCart = () => {
-
         if (!user) {
             Swal.fire({
                 title: "Please login first",
@@ -42,7 +41,6 @@ const SingleEbike = ({ item }) => {
                     image: image,
                     item_id: _id,
                     email: user.email
-
                 }
 
                 fetch('http://localhost:3000/cart', {
@@ -54,25 +52,21 @@ const SingleEbike = ({ item }) => {
                 })
                     .then((res) => res.json())
                     .then((data) => {
-                        if (data.message == 'success') {
+                        if (data.message === 'success') {
                             refetch()
                             Swal.fire({
                                 title: "Added to cart successfully",
                                 icon: "success"
                             });
-                        }
-                        else {
+                        } else {
                             Swal.fire({
                                 title: "Error adding to cart",
                                 icon: "error"
                             });
                         }
-
                     })
             }
         });
-
-
     }
 
     const handleFav = () => {
@@ -82,9 +76,8 @@ const SingleEbike = ({ item }) => {
                 icon: "error"
             });
             navigate('/login')
-            return 
+            return
         }
-
 
         Swal.fire({
             title: "Are you sure?",
@@ -123,34 +116,30 @@ const SingleEbike = ({ item }) => {
                     .catch((err) => console.log(err))
             }
         });
-
-
-
     }
 
     return (
-        <div className="card bg-base-100 w-72 shadow-xl">
+        <div className="card bg-base-100 shadow-xl w-full md:w-72 mx-auto my-4">
             <CiHeart onClick={() => handleFav()} className='ml-auto text-2xl transform -translate-x-10 translate-y-10 hover:text-orange-600 hover:text-3xl hover:cursor-pointer' />
             <figure className="px-10 pt-10">
-
                 <img
                     src={image}
                     alt="Bikes"
-                    className="rounded-xl w-[15rem]" />
+                    className="rounded-xl w-full md:w-[15rem]" />
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title text-lg font-abc font-extrabold leading-6">{name}</h2>
-                <div className='flex gap-9 items-center'>
+                <h2 className="card-title lg:text-lg font-abc font-extrabold leading-6">{name}</h2>
+                <div className='flex gap-2 md:gap-9 items-center'>
                     <p className='font-abc text-sm font-extrabold'> Price: <span className='text-orange-600 text-lg animate-pulse'>${price}</span> </p>
                     <p className='flex items-center font-abc text-sm'> <FaStar className='text-orange-400 text-base' /> ({rating}) </p>
                 </div>
-                <div className='flex mt-3 gap-2'>
+                <div className='flex mt-3 gap-2 justify-center'>
                     <button className='btn btn-outline text-lg  border-gray-300' onClick={() => hadnleCart()}  >Add to cart</button>
-                    <Link to={`/bikeSpecs/${_id}`} >  <button className='btn btn-outline text-4xl  border-gray-300' ><FcViewDetails /></button> </Link>
+                    <Link to={`/bikeSpecs/${_id}`} >  <button className='btn btn-outline text-2xl lg:text-4xl  border-gray-300' ><FcViewDetails /></button> </Link>
                 </div>
             </div>
         </div>
     )
 }
 
-export default SingleEbike
+export default SingleEbike;
