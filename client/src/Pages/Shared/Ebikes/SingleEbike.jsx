@@ -134,7 +134,7 @@ const SingleEbike = ({ item }) => {
                     <p className='flex items-center font-abc text-sm'> <FaStar className='text-orange-400 text-base' /> ({rating}) </p>
                 </div>
                 <div className='flex mt-3 gap-2 justify-center'>
-                    <button className='btn btn-outline text-lg  border-gray-300' onClick={() => hadnleCart()}  >Add to cart</button>
+                    <button className='btn btn-outline text-lg  border-gray-300' onClick={() => hadnleCart()}  >Add Item</button>
                     <Link to={`/bikeSpecs/${_id}`} >  <button className='btn btn-outline text-2xl lg:text-4xl  border-gray-300' ><FcViewDetails /></button> </Link>
                 </div>
             </div>

@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import logo from '../../../assets/Nav/logo.png';
 import { IoIosSearch } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { FaRegHeart } from 'react-icons/fa';
+import { FaRegHeart, FaUserCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 import Swal from 'sweetalert2';
@@ -13,8 +13,7 @@ function Nav() {
     const { user, logOut } = useContext(AuthContext);
     const [isPending, cart] = useCart();
     const [isLoading, fav] = useFav();
-    const [isOpen, setIsOpen] = useState(false);
-
+    
     const NavOptions = (
         <>
             <li> <Link to='/' className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'>Home</Link></li>
@@ -33,10 +32,6 @@ function Nav() {
         });
     };
 
-    const toggleDropdown = () => {
-        setIsOpen(!isOpen);
-    };
-
     return (
         <div className="opacity-85 navbar bg-base-100 lg:px-20 fixed top-0 z-10 max-w-screen-xl mx-auto">
             <div className="navbar-start">
@@ -50,7 +45,7 @@ function Nav() {
                         {NavOptions}
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost text-xl" onClick={() =>  window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <Link to='/' className="btn btn-ghost p-0 text-xl" onClick={() =>  window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     <img src={logo} alt="" />
                     <p className='hidden lg:block'>ElectroBike</p>
                 </Link>
@@ -61,39 +56,41 @@ function Nav() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <div className="dropdown dropdown-end">
+               {
+                user &&  <div className="dropdown dropdown-end">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar mr-4 lg:mr-0">
                     {
-                        user && user.photoURL && (
-                            <div tabIndex={0} className="btn btn-ghost" onClick={toggleDropdown}>
-                                <img className='w-12 rounded-full' src={user.photoURL} alt="User Profile" />
-                            </div>
+                        user && user.photoURL ? (
+                            <img className="w-10 rounded-full" src={user.photoURL} alt="User Profile" />
+                        ) : (
+                            <FaUserCircle className="text-4xl text-cyan-700" />
                         )
                     }
-                    {isOpen && (
-                        <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 shadow text-sm">
-                            <li>
-                                <Link to='/menu' className='font-abc hover:text-orange-500 font-bold btn btn-ghost'>
-                                    <IoIosSearch /> Search
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to='/dashboard/favorites' className='font-abc hover:text-orange-500 font-bold btn btn-ghost'>
-                                    <FaRegHeart /> Favorites ({fav.length})
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to='/dashboard/mycart' className='font-abc hover:text-orange-500 font-bold btn btn-ghost'>
-                                    <MdOutlineShoppingCart /> Cart ({cart.length})
-                                </Link>
-                            </li>
-                            <li>
-                                <button className='font-abc hover:text-orange-500 text-lg font-bold btn btn-outline btn-error' onClick={handleLogout}>
-                                    Logout
-                                </button>
-                            </li>
-                        </ul>
-                    )}
-                </div>
+                </label>
+                <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <li>
+                        <Link to='/menu' className='font-abc hover:text-orange-500 font-bold btn btn-ghost'>
+                            <IoIosSearch /> Search
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to='/dashboard/favorites' className='font-abc hover:text-orange-500 font-bold btn btn-ghost'>
+                            <FaRegHeart /> Favorites ({fav.length})
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to='/dashboard/mycart' className='font-abc hover:text-orange-500 font-bold btn btn-ghost'>
+                            <MdOutlineShoppingCart /> Cart ({cart.length})
+                        </Link>
+                    </li>
+                    <li>
+                        <button className='font-abc hover:text-orange-500 text-lg font-bold btn btn-outline btn-error' onClick={handleLogout}>
+                            Logout
+                        </button>
+                    </li>
+                </ul>
+            </div>
+               }
                 {
                     !user && (
                         <Link to='/login' className='hover:text-orange-500 text-base btn btn-outline btn-info'>

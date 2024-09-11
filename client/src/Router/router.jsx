@@ -17,6 +17,7 @@ import ManageItems from "../DashBoard/Manage Items/ManageItems";
 import UpdateItems from "../DashBoard/Manage Items/Updateitems";
 import AddBikes from "../DashBoard/Manage Items/AddBikes";
 import PrivateRoute from "./PrivateRoute";
+import { AdminRoute } from "./AdminRoute";
 
 
 export const router = createBrowserRouter([
@@ -77,20 +78,20 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'allusers',
-                element: <AllUsers />
+                element: <AdminRoute><AllUsers /></AdminRoute>
             },
             {
                 path: 'manageitems',
-                element: <ManageItems />
+                element: <AdminRoute><ManageItems /></AdminRoute>
             },
             {
                 path: 'updateitems/:id',
-                element: <UpdateItems /> ,
+                element: <AdminRoute><UpdateItems /></AdminRoute> ,
                 loader: ({ params }) => fetch(`http://localhost:3000/bikes/${params.id}`)
             },
             {
                 path:'additem',
-                element : <AddBikes/>
+                element : <AdminRoute><AddBikes/></AdminRoute>
             }
         ]
     }

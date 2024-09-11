@@ -22,7 +22,7 @@ const OurProducts = () => {
         }
       </div>
 
-      <Link to='/menu' className='btn text-lg font-extrabold bg-slate-600 text-white font-abc w-1/3 flex mx-auto mt-8 mb-[6rem] hover:text-black'> View All </Link>
+      <Link to='/menu' className='btn text-lg font-extrabold bg-slate-600 text-white font-abc w-1/3 flex mx-auto mt-8 mb-[6rem] hover:text-black' onClick={() => window.scrollTo({ top:0 , behavior:"instant" })}> View All </Link>
 
 
     </div>

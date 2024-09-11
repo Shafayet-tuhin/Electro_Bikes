@@ -16,7 +16,7 @@ const Login = () => {
     const [pass, setPass] = useState(true);
     const [email, setEmail] = useState('');
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+ 
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -185,7 +185,7 @@ const Login = () => {
                         <div className='flex flex-col items-center mt-4 gap-4'>
                             <p className='text-gray-700 text-lg font-medium'>Or Login In with</p>
 
-                            <button className='text-3xl btn' onClick={handleGoogle}><FcGoogle /></button>
+                            <button className='text-xl btn w-full' onClick={handleGoogle}><FcGoogle />google</button>
 
                             <p className='text-gray-600 text-base font-medium'>Don't have an account? <Link className='text-lg text-[#FF3811]' to='/register'>Sign In</Link></p>
                         </div>
