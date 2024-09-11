@@ -2,9 +2,9 @@ import React from 'react';
 
 const RestPage1 = () => {
     return (
-        <div className="px-4 lg:px-0">
+        <div className="px-4 lg:px-0 lg:mt-32 mt-16  ">
 
-            <p className='text-[#23272F] font-semibold text-[1.5rem] sm:text-[2rem] lg:text-[2.5rem] text-center'>
+            <p className=' font-semibold text-[1.5rem] sm:text-[2rem] lg:text-[2.5rem] text-center'>
                 How Is <span className='text-[#14C9C9]'>Our Ebike</span> You May <span className='text-[#14C9C9]'>Ask</span>
             </p>
 

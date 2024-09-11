@@ -119,8 +119,8 @@ const SingleEbike = ({ item }) => {
     }
 
     return (
-        <div className="card bg-base-100 shadow-xl w-full md:w-72 mx-auto my-4">
-            <CiHeart onClick={() => handleFav()} className='ml-auto text-2xl transform -translate-x-10 translate-y-10 hover:text-orange-600 hover:text-3xl hover:cursor-pointer' />
+        <div className="card bg-base-100 shadow-xl dark:shadow-base-300 w-full md:w-72 mx-auto my-4">
+            <CiHeart onClick={() => handleFav()} className='mb-5 ml-auto text-2xl transform -translate-x-10 translate-y-10 hover:text-orange-600 hover:text-3xl hover:cursor-pointer' />
             <figure className="px-10 pt-10">
                 <img
                     src={image}

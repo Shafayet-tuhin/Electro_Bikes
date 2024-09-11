@@ -165,7 +165,7 @@ const handleFav = () => {
           <img
             src={image}
             alt={name}
-            className="w-full h-auto "
+            className="w-full h-auto rounded-3xl"
           />
           <button className="animate-bounce absolute top-2 right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
             <BsHeart onClick={() => {handleFav()}} className="text-red-500" size={24} />
@@ -175,7 +175,7 @@ const handleFav = () => {
         {/* Details Section */}
         <div className="flex flex-col  gap-8">
           <div>
-            <h1 className="text-4xl font-abc font-bold text-gray-800">
+            <h1 className="text-4xl font-abc font-bold ">
               {name}
             </h1>
             <p className="text-gray-600 text-2xl mt-2">{details}</p>
@@ -183,7 +183,7 @@ const handleFav = () => {
               <RiUserStarFill className="text-3xl text-yellow-500" />
               <span className="ml-2 text-gray-600">{rating}</span>
             </div>
-            <p className="text-3xl font-semibold text-gray-800 mt-4 flex items-center gap-2 ">
+            <p className="text-3xl font-semibold  mt-4 flex items-center gap-2 ">
               <MdOutlinePriceChange className="text-green-500" />  ${price}
             </p>
             <p className="text-gray-600 font-abc font-semibold text-xl mt-3 flex items-center gap-2"> <TbCategoryMinus className="text-blue-400 text-3xl" /> Category : {category}</p>
@@ -199,9 +199,9 @@ const handleFav = () => {
 
       {/* Specifications Section */}
       <div className="mt-12 mb-[5rem] flex flex-col lg:flex-row gap-3 justify-center items-center font-abc">
-        <img src={logo} className="w-[30rem]" alt="" />
+        <img src={logo} className="w-[30rem] rounded-3xl" alt="" />
         <div>
-          <h2 className=" text-5xl font-semibold text-gray-800">
+          <h2 className=" text-5xl font-semibold ">
             Specifications
           </h2>
           <hr className="mb-8 mt-4 border-2" />

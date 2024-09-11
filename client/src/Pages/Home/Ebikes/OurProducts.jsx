@@ -10,7 +10,7 @@ const OurProducts = () => {
 
   return (
     <div>
-      <p className='text-[#23272F] font-semibold mt-10 text-[2.5rem] text-center '>Our <span className='text-[#14C9C9]'>Products</span></p>
+      <p className=' font-semibold mt-10 text-[2.5rem] text-center '>Our <span className='text-[#14C9C9]'>Products</span></p>
       <hr className='mb-10 mt-2 w-1/2 mx-auto border-2 rounded-2xl ' />
       <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4'>
         {

@@ -33,38 +33,38 @@ const ContactForm = () => {
       <div className='flex flex-col items-center gap-4 mb-12'>
         <p className='text-[#D99904] italic text-xl font-normal'>---Send Us a Message---</p>
         <hr className='w-32 md:w-56' />
-        <p className='text-[#151515] font-normal text-2xl md:text-3xl lg:text-4xl font-abc'>CONTACT FORM</p>
+        <p className=' font-normal text-2xl md:text-3xl lg:text-4xl font-abc'>CONTACT FORM</p>
         <hr className='w-36 md:w-60' />
       </div>
 
       <div>
-        <form className='grid grid-cols-1 md:grid-cols-2 gap-4 p-6 md:p-12 lg:p-20 bg-[#F3F3F3] rounded-xl mb-32' ref={form} onSubmit={sendEmail}>
+        <form className='grid grid-cols-1 md:grid-cols-2 gap-4 p-6 md:p-12 lg:p-20 bg-base-200 shadow-xl shadow-base-300 rounded-xl mb-32' ref={form} onSubmit={sendEmail}>
           <div>
             <label className="label">
               <span className="label-text text-[#444444] text-xl font-semibold">Name</span>
             </label>
-            <input type="text" name="user_name" placeholder="Enter Your name" className="w-full text-xl py-2 md:py-4 px-4 md:px-6 border rounded-lg" required />
+            <input type="text" name="user_name" placeholder="Enter Your name" className="w-full bg-base-100 text-xl py-2 md:py-4 px-4 md:px-6 border rounded-lg" required />
           </div>
 
           <div>
             <label className="label">
               <span className="label-text text-[#444444] text-xl font-semibold">Email</span>
             </label>
-            <input type="email" name="user_email" placeholder="Enter Your E-mail" className="w-full text-xl py-2 md:py-4 px-4 md:px-6 border rounded-lg" required />
+            <input type="email" name="user_email" placeholder="Enter Your E-mail" className="bg-base-100 w-full text-xl py-2 md:py-4 px-4 md:px-6 border rounded-lg" required />
           </div>
 
           <div className='md:col-span-2'>
             <label className="label">
               <span className="label-text text-[#444444] text-xl font-semibold">Phone</span>
             </label>
-            <input type="tel" name='user_number' placeholder="Enter Your Number" className="w-full text-xl py-2 md:py-4 px-4 md:px-6 border rounded-lg" required />
+            <input type="tel" name='user_number' placeholder="Enter Your Number" className="bg-base-100 w-full text-xl py-2 md:py-4 px-4 md:px-6 border rounded-lg" required />
           </div>
 
           <div className='md:col-span-2'>
             <label className="label">
               <span className="label-text text-[#444444] text-xl font-semibold">Message</span>
             </label>
-            <textarea placeholder="Enter Your Message" name="message" className="w-full text-xl h-40 md:h-60 py-2 md:py-4 px-4 md:px-6 border rounded-lg resize-none" required />
+            <textarea placeholder="Enter Your Message" name="message" className="bg-base-100 w-full text-xl h-40 md:h-60 py-2 md:py-4 px-4 md:px-6 border rounded-lg resize-none" required />
           </div>
 
           <div className="md:col-span-2 flex justify-center mt-4">

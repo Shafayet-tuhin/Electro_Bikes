@@ -82,7 +82,7 @@ const BikeMenu = () => {
             </div>
 
             
-            <p className="text-[#23272F] font-semibold text-xl md:text-2xl lg:text-[2.5rem] text-center">
+            <p className=" font-semibold text-xl md:text-2xl lg:text-[2.5rem] text-center">
                 Browse Our <span className="text-[#14C9C9]">Ebike Collection</span>
             </p>
 
@@ -92,7 +92,7 @@ const BikeMenu = () => {
             <div className="flex flex-col lg:flex-row gap-8 mt-8 lg:mt-12">
                 
                 <div className="lg:w-1/3 w-full">
-                    <div className="bg-white shadow-lg rounded-lg p-6">
+                    <div className="shadow-lg shadow-slate-500 rounded-lg p-6">
                         
                         <h2 className="text-lg font-semibold mb-4">Sort by Price</h2>
                         <select
@@ -179,26 +179,26 @@ const BikeMenu = () => {
                         <input
                             type="text"
                             placeholder="Search Bikes Here"
-                            className="input input-bordered w-1/2 lg:w-3/4 text-center"
+                            className=" input input-bordered w-1/2 lg:w-3/4 text-center "
                             value={searchTerm}
                             onChange={handleInputChange}
                             onFocus={() => setDrop(searchTerm.length > 0)}
                             onBlur={() => setTimeout(() => setDrop(false), 100)}
                         />
                         {drop && (
-                            <div className="absolute top-full mt-2 w-full lg:w-3/4 z-50 bg-white shadow-lg rounded-lg max-h-60 overflow-y-auto">
+                            <div className="absolute top-full mt-2 w-full lg:w-3/4 z-50 bg-base-100 shadow-lg rounded-lg max-h-60 overflow-y-auto">
                                 {Bikes.filter((item) =>
                                     item.name.toLowerCase().includes(searchTerm.toLowerCase())
                                 ).map((item) => (
                                     <div
                                         key={item._id}
-                                        className="flex items-center p-2 cursor-pointer hover:bg-gray-100"
+                                        className="flex items-center p-2 cursor-pointer hover:bg-base-300"
                                         onMouseDown={() => inputSuggestion(item)}
                                     >
                                         <img
                                             src={item.image} 
                                             alt={item.name} 
-                                            className="w-12 h-12 lg:w-16 lg:h-16 mr-2"
+                                            className="w-12 h-12 lg:w-16 lg:h-16 mr-2 rounded-3xl"
                                         />
                                         <div className="font-abc text-sm lg:text-base">{item.name}</div>
                                     </div>
