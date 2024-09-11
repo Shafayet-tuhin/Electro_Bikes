@@ -41,7 +41,7 @@ const Banner = () => {
           <p className='font-abc font-semibold text-2xl lg:text-[2.5rem] leading-tight lg:leading-normal mb-6 mt-6'>Find your <span className='text-[#14C9C9]'>perfect</span> Ebike in less than <span className='text-[#14C9C9]'>3 minutes</span></p>
           <p className='text-[#667085] lg:w-[50rem] mx-auto font-normal text-sm lg:text-base leading-5 lg:leading-6'>Answer a few quick questions and we'll instantly recommend the best eBike for you. Get custom recommendations based on your height and riding needs.</p>
         </div>
-        <button className='btn btn-accent text-white font-semibold text-sm lg:text-base mt-4 lg:mt-[3.13rem] relative'>Get Your Recommendations</button>
+        <a href='https://docs.google.com/presentation/d/1KSB5rYiJlXgCRzQmd8dtzWzN7fodlIA8pxlwQ-jp-8s/edit#slide=id.g1502c199a10_0_1036' target='_blank' className='btn btn-accent text-white font-semibold text-sm lg:text-base mt-4 lg:mt-[3.13rem] relative'>Get Your Recommendations</a>
 
         <img className='absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[20rem] lg:w-[31rem]' src={bike} alt="Bike on Road" />
       </div>
