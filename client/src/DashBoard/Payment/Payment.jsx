@@ -16,7 +16,7 @@ const Payment = () => {
   console.log(total)
   return (
     <div className='flex flex-col items-center justify-center'>
-      <img src={banner2} className='w-[100%]' alt="" />
+      <img src={banner2} className='w-[100%] rounded-3xl' alt="" />
       <Elements stripe={stripePromise}>
         <CheckOut cart={cart} price={price} refetch={refetch} />
       </Elements>

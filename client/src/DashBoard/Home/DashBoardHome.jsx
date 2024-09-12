@@ -94,13 +94,13 @@ const DashBoardHome = () => {
           ---Dashboard Home Page---
         </p>
         <hr className="w-[22rem]" />
-        <p className="text-[#151515] font-normal text-[2.5rem] font-abc">
+        <p className="font-normal text-[2.5rem] font-abc">
           Welcome Back, {user.displayName}
         </p>
       </div>
 
       <div className="flex justify-center mt-8">
-        <div className="bg-slate-200 px-14 py-5 flex flex-col items-center gap-3 rounded-3xl">
+        <div className="bg-base-200 px-14 py-5 flex flex-col items-center gap-3 rounded-3xl">
           {user.photoURL ? (
             <img className="w-[10rem] rounded-full border-4 p-1 border-sky-300" src={user.photoURL} alt="" />
           ) : (
@@ -117,7 +117,7 @@ const DashBoardHome = () => {
         </div>
       </div>
 
-      <div className='flex flex-col lg:flex-row mt-4'>
+      <div className='flex flex-col lg:flex-row mt-4 '>
         <div className="mt-8">
           <HighchartsReact
             highcharts={Highcharts}

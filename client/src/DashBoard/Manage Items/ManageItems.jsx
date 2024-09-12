@@ -52,7 +52,7 @@ const ManageItems = () => {
                     ---Whats New ?---
                 </p>
                 <hr className="w-[22rem]" />
-                <p className="text-[#151515] font-normal text-[2.5rem] font-abc">
+                <p className=" font-normal text-[2.5rem] font-abc">
                     Manage Item
                 </p>
                 <hr className="w-[23rem]" />

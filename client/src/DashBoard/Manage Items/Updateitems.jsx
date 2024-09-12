@@ -82,7 +82,7 @@ const UpdateItems = () => {
           ---What's New?---
         </p>
         <hr className="w-32 md:w-48 lg:w-[22rem]" />
-        <p className="text-[#151515] text-2xl md:text-3xl lg:text-[2.5rem] font-abc">
+        <p className=" text-2xl md:text-3xl lg:text-[2.5rem] font-abc">
           Update Item
         </p>
         <hr className="w-32 md:w-48 lg:w-[23rem]" />
@@ -96,7 +96,7 @@ const UpdateItems = () => {
 
       <div>
         <form
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 md:p-[5.5rem] bg-[#F3F3F3] rounded-xl lg:mb-32"
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 md:p-[5.5rem] bg-base-100 rounded-xl lg:mb-32"
           onSubmit={handleSubmit}
         >
           <img
@@ -108,7 +108,7 @@ const UpdateItems = () => {
           {/* Basic Info Inputs */}
           <div className="col-span-1 md:col-span-2">
             <label className="label">
-              <span className="label-text text-[#444444] text-xl font-semibold">
+              <span className="label-text text-xl font-semibold">
                 Name
               </span>
             </label>
@@ -117,21 +117,21 @@ const UpdateItems = () => {
               name="name"
               defaultValue={data.name}
               placeholder="Enter Product name"
-              className="w-full text-xl py-[1.6rem] px-[2.25rem] border rounded-lg"
+              className="w-full bg-base-100 text-xl py-[1.6rem] px-[2.25rem] border rounded-lg"
               required
             />
           </div>
 
           <div>
             <label className="label">
-              <span className="label-text text-[#444444] text-xl font-semibold">
+              <span className="label-text text-xl font-semibold">
                 Category
               </span>
             </label>
             <select
               defaultValue={data.category}
               name="category"
-              className="w-full text-xl py-[1.6rem] px-[2.25rem] border rounded-lg"
+              className="w-full bg-base-100  text-xl py-[1.6rem] px-[2.25rem] border rounded-lg"
               required
             >
               <option value="folding">Folding</option>
@@ -143,7 +143,7 @@ const UpdateItems = () => {
 
           <div>
             <label className="label">
-              <span className="label-text text-[#444444] text-xl font-semibold">
+              <span className="label-text text-xl font-semibold">
                 Price
               </span>
             </label>
@@ -152,14 +152,14 @@ const UpdateItems = () => {
               name="price"
               defaultValue={data.price}
               placeholder="Enter Your Price"
-              className="w-full text-xl py-[1.6rem] px-[2.25rem] border rounded-lg"
+              className="w-full text-xl bg-base-100 py-[1.6rem] px-[2.25rem] border rounded-lg"
               required
             />
           </div>
 
           <div className="col-span-1 md:col-span-2">
             <label className="label">
-              <span className="label-text text-[#444444] text-xl font-semibold">
+              <span className="label-text text-xl font-semibold">
                 Bike Details
               </span>
             </label>
@@ -167,7 +167,7 @@ const UpdateItems = () => {
               defaultValue={data.details}
               placeholder="Enter Data Details"
               name="details"
-              className="w-full text-xl h-[8rem] py-[1.6rem] px-[2.25rem] border rounded-lg resize-none"
+              className="w-full bg-base-100  text-xl h-[8rem] py-[1.6rem] px-[2.25rem] border rounded-lg resize-none"
               required
             />
           </div>
@@ -175,7 +175,7 @@ const UpdateItems = () => {
           {/* Specifications Section */}
           <div className="col-span-1 md:col-span-2">
             <label className="label">
-              <span className="label-text text-[#444444] text-xl font-semibold">
+              <span className="label-text text-xl font-semibold">
                 Specifications
               </span>
             </label>
@@ -186,7 +186,7 @@ const UpdateItems = () => {
                   value={spec}
                   onChange={(e) => updateSpecification(index, e.target.value)}
                   placeholder="Enter Specification"
-                  className="w-full text-xl py-[1.2rem] px-[2.25rem] border rounded-lg"
+                  className="w-full bg-base-100  text-xl py-[1.2rem] px-[2.25rem] border rounded-lg"
                   required
                 />
                 <button

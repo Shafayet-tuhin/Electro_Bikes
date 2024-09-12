@@ -78,7 +78,7 @@ const AddBike = () => {
           ---What's New?---
         </p>
         <hr className="w-32 md:w-48 lg:w-[22rem]" />
-        <p className="text-[#151515] text-2xl md:text-3xl lg:text-[2.5rem] font-abc">
+        <p className="text-2xl md:text-3xl lg:text-[2.5rem] font-abc">
           Add New Bike
         </p>
         <hr className="w-32 md:w-48 lg:w-[23rem]" />
@@ -86,7 +86,7 @@ const AddBike = () => {
 
       <div>
         <form
-          className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 md:p-[5.5rem] bg-[#F3F3F3] rounded-xl lg:mb-32"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 md:p-[5.5rem] bg-base-200 rounded-xl lg:mb-32"
           onSubmit={handleSubmit}
         >
           {/* Basic Info Inputs */}
@@ -100,7 +100,7 @@ const AddBike = () => {
               type="text"
               name="name"
               placeholder="Enter Bike Name"
-              className="w-full text-base py-[1.6rem] px-[2.25rem] border rounded-lg"
+              className="w-full text-base py-[1.6rem] bg-base-100 px-[2.25rem] border rounded-lg"
               required
             />
           </div>
@@ -113,7 +113,7 @@ const AddBike = () => {
             </label>
             <select
               name="category"
-              className="w-full text-base py-[1.6rem] px-[2.25rem] border rounded-lg"
+              className="w-full text-base py-[1.6rem] bg-base-100 px-[2.25rem] border rounded-lg"
               required
             >
               <option value="folding">Folding</option>
@@ -133,7 +133,7 @@ const AddBike = () => {
               type="number"
               name="price"
               placeholder="Enter Bike Price"
-              className="w-full text-base py-[1.6rem] px-[2.25rem] border rounded-lg"
+              className="w-full bg-base-100 text-base py-[1.6rem] px-[2.25rem] border rounded-lg"
               required
             />
           </div>
@@ -153,7 +153,7 @@ const AddBike = () => {
               value={rating}
               onChange={(e) => setRating(e.target.value)}
               placeholder="Enter Rating (0-5)"
-              className="w-full text-base py-[1.6rem] px-[2.25rem] border rounded-lg"
+              className="w-full bg-base-100 text-base py-[1.6rem] px-[2.25rem] border rounded-lg"
               required
             />
           </div>
@@ -167,7 +167,7 @@ const AddBike = () => {
             <textarea
               placeholder="Enter Bike Details"
               name="details"
-              className="w-full text-base h-[8rem] py-[1.6rem] px-[2.25rem] border rounded-lg resize-none"
+              className="w-full text-base bg-base-100 h-[8rem] py-[1.6rem] px-[2.25rem] border rounded-lg resize-none"
               required
             />
           </div>
@@ -182,7 +182,7 @@ const AddBike = () => {
               type="text"
               name="image"
               placeholder="Enter Image URL"
-              className="w-full text-base py-[1.6rem] px-[2.25rem] border rounded-lg"
+              className="w-full bg-base-100 text-base py-[1.6rem] px-[2.25rem] border rounded-lg"
               required
             />
           </div>
@@ -190,7 +190,7 @@ const AddBike = () => {
           {/* Specifications Section */}
           <div className="col-span-1 md:col-span-3">
             <label className="label">
-              <span className="label-text text-[#444444] text-lg font-semibold">
+              <span className="label-text  text-[#444444] text-lg font-semibold">
                 Specifications
               </span>
             </label>
@@ -201,7 +201,7 @@ const AddBike = () => {
                   value={spec}
                   onChange={(e) => updateSpecification(index, e.target.value)}
                   placeholder="Enter Specification"
-                  className="w-full text-base py-[1.2rem] px-[2.25rem] border rounded-lg"
+                  className="w-full text-base bg-base-100 py-[1.2rem] px-[2.25rem] border rounded-lg"
                   required
                 />
                 {specifications.length > 1 && (

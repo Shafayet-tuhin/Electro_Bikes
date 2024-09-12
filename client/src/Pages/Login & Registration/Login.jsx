@@ -137,7 +137,7 @@ const Login = () => {
 
             <div className="hero-content flex-col lg:flex-row">
                 <div className="mr-12 w-1/2">
-                    <img src='https://krishnecs.in/wp-content/uploads/2023/09/login-animate-2.gif' alt="" />
+                    <img src='https://krishnecs.in/wp-content/uploads/2023/09/login-animate-2.gif' alt=""  className='rounded-3xl'/>
                 </div>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
                     <form className="card-body" onSubmit={handleSubmit}>
@@ -183,11 +183,11 @@ const Login = () => {
                         </div>
 
                         <div className='flex flex-col items-center mt-4 gap-4'>
-                            <p className='text-gray-700 text-lg font-medium'>Or Login In with</p>
+                            <p className=' text-lg font-medium'>Or Login In with</p>
 
                             <button className='text-xl btn w-full' onClick={handleGoogle}><FcGoogle />google</button>
 
-                            <p className='text-gray-600 text-base font-medium'>Don't have an account? <Link className='text-lg text-[#FF3811]' to='/register'>Sign In</Link></p>
+                            <p className='text-base font-medium'>Don't have an account? <Link className='text-lg text-[#FF3811]' to='/register'>Sign In</Link></p>
                         </div>
                     </form>
                 </div>

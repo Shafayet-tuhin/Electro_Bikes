@@ -156,7 +156,7 @@ const CheckOut = ({ cart, price, refetch }) => {
       </form>
       {cardError && <p>{cardError}</p>}
 
-      <div className="p-4 border border-gray-300 rounded-md bg-gray-100 mb-4 mt-8">
+      <div className="p-4 bg-base-200 border border-gray-300 rounded-md  mb-4 mt-8">
         <h3 className="text-lg font-semibold mb-2">Demo Card for Testing Purposes:</h3>
         <ul className="list-none">
           <li>

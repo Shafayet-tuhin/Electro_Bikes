@@ -184,7 +184,7 @@ const MyCart = () => {
                 </div>
 
 
-                <div className="lg:col-span-1 bg-[#fffbfb] p-6 rounded-md shadow-sm">
+                <div className="lg:col-span-1 bg-base-200 p-6 rounded-md shadow-sm">
                     <h1 className="font-abc text-3xl font-semibold mb-4">Order details</h1>
 
                     <div className="space-y-2 text-lg">

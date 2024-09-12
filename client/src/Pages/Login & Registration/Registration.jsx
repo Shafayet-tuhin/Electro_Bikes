@@ -88,7 +88,7 @@ const Register = () => {
             </Helmet>
             <div className="hero-content flex-col lg:flex-row">
                 <div className="mr-12 w-1/2 ">
-                    <img src='https://longlifevision.com/wp-content/uploads/2024/01/E9TtaYgKZu.gif' alt="" />
+                    <img src='https://longlifevision.com/wp-content/uploads/2024/01/E9TtaYgKZu.gif' className='rounded-3xl' alt="" />
                 </div>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form className="card-body" onSubmit={handleSubmit}>
@@ -144,7 +144,7 @@ const Register = () => {
                         </div>
 
                         <div className="flex flex-col items-center mt-4 gap-4">
-                            <p className="text-gray-600 text-base font-medium">
+                            <p className=" text-base font-medium">
                                 Dont have an account?{" "}
                                 <Link className=" text-lg text-[#FF3811]" to="/login">
                                     LogIn

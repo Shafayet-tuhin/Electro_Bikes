@@ -12,13 +12,13 @@ import { AuthContext } from '../../Context/AuthProvider'
 
 const AllUsers = () => {
 
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext)
   const token = localStorage.getItem('token')
 
   const { data: users = [], refetch } = useQuery({
     queryKey: ['users'],
     queryFn: async () => {
-      const res = await fetch('http://localhost:3000/users' , {
+      const res = await fetch('http://localhost:3000/users', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -27,17 +27,17 @@ const AllUsers = () => {
     },
   })
 
-const navigate = useNavigate()
+  const navigate = useNavigate()
 
 
   const switchRole = (item) => {
-   
+
     const newRole = item.role === 'user' ? 'admin' : 'user';
 
 
     Swal.fire({
       title: "Are you sure?",
-      text:  `Do you want to update the role to ${newRole}.`,
+      text: `Do you want to update the role to ${newRole}.`,
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -47,7 +47,7 @@ const navigate = useNavigate()
       if (result.isConfirmed) {
 
         fetch(`http://localhost:3000/users/${item._id}`, {
-          method : 'PUT' ,
+          method: 'PUT',
           headers: {
             'Content-Type': 'application/json'
           },
@@ -55,7 +55,7 @@ const navigate = useNavigate()
         })
           .then(res => res.json())
           .then(data => {
-         
+
             if (data.acknowledged) {
               refetch()
               Swal.fire({
@@ -77,12 +77,14 @@ const navigate = useNavigate()
       <Helmet>
         <title>All User</title>
       </Helmet>
-    
-       
-       <div className='flex items-center flex-col gap-2'>
-                  <h1>All User</h1>
-                  <p>Total User : {users.length} </p>
-       </div>
+
+
+      <div className='flex items-center flex-col gap-2'>
+        <p className=" font-normal text-[2.5rem] font-abc">
+         User Management
+        </p>
+        <p>Total User : {users.length} </p>
+      </div>
 
 
       <div className="overflow-x-auto">
@@ -121,13 +123,13 @@ const navigate = useNavigate()
                     <td>{item.email}</td>
                     <td className='uppercase'>{item.role} </td>
 
-                    <td>  
-                         <button className='btn' onClick={() => switchRole(item)}>
-                              {
-                                item.role === 'user'? <> Make Admin <GrUserAdmin /></> : <>Make User<RiAdminFill /> </>
-                              }
-                         </button>
-                       </td>
+                    <td>
+                      <button className='btn' onClick={() => switchRole(item)}>
+                        {
+                          item.role === 'user' ? <> Make Admin <GrUserAdmin /></> : <>Make User<RiAdminFill /> </>
+                        }
+                      </button>
+                    </td>
                   </tr>
 
                 )
