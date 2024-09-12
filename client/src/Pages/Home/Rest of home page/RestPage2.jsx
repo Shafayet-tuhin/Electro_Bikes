@@ -11,7 +11,7 @@ import banner from '../../../assets/Rest/banner.jpg';
 const RestPage2 = () => {
     return (
         <div className="px-4">
-            <p className='text-[#23272F] font-semibold text-2xl md:text-3xl lg:text-[2.5rem] text-center'>
+            <p className='font-semibold text-2xl md:text-3xl lg:text-[2.5rem] text-center'>
                 Choose your <span className='text-[#14C9C9]'>Ebike</span>
             </p>
             <p className='text-[#667085] mt-5 max-w-lg md:max-w-xl lg:max-w-2xl mx-auto font-normal text-sm md:text-base lg:text-lg leading-6 text-center mb-16'>

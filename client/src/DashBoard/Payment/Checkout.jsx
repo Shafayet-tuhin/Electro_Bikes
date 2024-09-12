@@ -25,7 +25,7 @@ const CheckOut = ({ cart, price, refetch }) => {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data);
+     
         setClientSecret(data.clientSecret);
       });
   }, [price]);

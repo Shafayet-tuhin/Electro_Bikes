@@ -51,7 +51,6 @@ const MyCart = () => {
 
     const handleDelete = (item) => {
 
-        console.log(item)
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -69,7 +68,7 @@ const MyCart = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
+                       
                         setLoading(false)
                         refetch()
                         Swal.fire({

@@ -128,7 +128,7 @@ const handleFav = () => {
                 .then((res) => res.json())
                 .then((data) => {
                     refetchFavorites()
-                    console.log(data)
+                    
                     Swal.fire({
                         title: "Added to favorites successfully",
                         icon: "success"
