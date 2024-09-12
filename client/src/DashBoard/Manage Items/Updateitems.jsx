@@ -32,7 +32,7 @@ const UpdateItems = () => {
       specifications: specifications, // Include updated specifications
     };
 
-    fetch(`http://localhost:3000/bikes/${data._id}`, {
+    fetch(`https://ebikes-ten.vercel.app/bikes/${data._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

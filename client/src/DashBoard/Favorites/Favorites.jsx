@@ -32,7 +32,7 @@ const Favorites = () => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/favorites/${item._id}`, { method: 'DELETE' })
+        fetch(`https://ebikes-ten.vercel.app/favorites/${item._id}`, { method: 'DELETE' })
           .then(res => res.json())
           .then(data => {
            refetchFavorites()
@@ -65,7 +65,7 @@ const Favorites = () => {
 
         }
 
-        fetch('http://localhost:3000/cart', {
+        fetch('https://ebikes-ten.vercel.app/cart', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -77,7 +77,7 @@ const Favorites = () => {
             console.log(data)
             if (data.message === 'success') {
               refetch()
-              fetch(`http://localhost:3000/favorites/${item._id}`, { method: 'DELETE' })
+              fetch(`https://ebikes-ten.vercel.app/favorites/${item._id}`, { method: 'DELETE' })
                 .then(res => res.json())
                 .then(data => {
                   refetchFavorites()

@@ -16,7 +16,7 @@ const CheckOut = ({ cart, price, refetch }) => {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    fetch('http://localhost:3000/create-payment-intent', {
+    fetch('https://ebikes-ten.vercel.app/create-payment-intent', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -95,7 +95,7 @@ const CheckOut = ({ cart, price, refetch }) => {
           itemImage: cart.map(item => item.image)
         }
 
-        fetch('http://localhost:3000/payment', {
+        fetch('https://ebikes-ten.vercel.app/payment', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -105,7 +105,7 @@ const CheckOut = ({ cart, price, refetch }) => {
           .then((res) => res.json())
           .then((data) => {
 
-            fetch(`http://localhost:3000/cart/paymentDone?email=${user.email}`, {
+            fetch(`https://ebikes-ten.vercel.app/cart/paymentDone?email=${user.email}`, {
               method: 'DELETE',
               headers: {
                 'Content-Type': 'application/json'  

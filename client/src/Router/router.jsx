@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
             {
                 path: '/bikeSpecs/:id',
                 element: <BikeSpecs />,
-                loader: ({ params }) => fetch(`http://localhost:3000/bikes/${params.id}`)
+                loader: ({ params }) => fetch(`https://ebikes-ten.vercel.app/bikes/${params.id}`)
             },
             {
                 path: '/menu',
@@ -87,7 +87,7 @@ export const router = createBrowserRouter([
             {
                 path: 'updateitems/:id',
                 element: <AdminRoute><UpdateItems /></AdminRoute> ,
-                loader: ({ params }) => fetch(`http://localhost:3000/bikes/${params.id}`)
+                loader: ({ params }) => fetch(`https://ebikes-ten.vercel.app/bikes/${params.id}`)
             },
             {
                 path:'additem',

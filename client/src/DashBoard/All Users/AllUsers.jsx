@@ -18,7 +18,7 @@ const AllUsers = () => {
   const { data: users = [], refetch } = useQuery({
     queryKey: ['users'],
     queryFn: async () => {
-      const res = await fetch('http://localhost:3000/users', {
+      const res = await fetch('https://ebikes-ten.vercel.app/users', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -46,7 +46,7 @@ const AllUsers = () => {
     }).then((result) => {
       if (result.isConfirmed) {
 
-        fetch(`http://localhost:3000/users/${item._id}`, {
+        fetch(`https://ebikes-ten.vercel.app/users/${item._id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json'

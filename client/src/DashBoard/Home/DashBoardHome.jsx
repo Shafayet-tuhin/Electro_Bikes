@@ -11,7 +11,7 @@ const DashBoardHome = () => {
   const { user, admin, BikeData } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch('http://localhost:3000/users')
+    fetch('https://ebikes-ten.vercel.app/users')
       .then(res => res.json())
       .then(data => setUsersData(data));
 

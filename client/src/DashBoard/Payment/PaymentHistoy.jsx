@@ -10,7 +10,7 @@ const PaymentHistory = () => {
   const { data: paymentInfo = [] } = useQuery({
     queryKey: ['payment', user.email],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:3000/payment?email=${user.email}`, {
+      const res = await fetch(`https://ebikes-ten.vercel.app/payment?email=${user.email}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

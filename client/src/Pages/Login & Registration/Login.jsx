@@ -37,7 +37,7 @@ const Login = () => {
 
                 console.log(loggedUser);
 
-                fetch('http://localhost:3000/jwt', {
+                fetch('https://ebikes-ten.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -72,7 +72,7 @@ const Login = () => {
                     image: user.photoURL,
                 }
 
-                fetch('http://localhost:3000/users', {
+                fetch('https://ebikes-ten.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -80,7 +80,7 @@ const Login = () => {
                     body: JSON.stringify(userDetails)
                 })
 
-                fetch('http://localhost:3000/jwt', {
+                fetch('https://ebikes-ten.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

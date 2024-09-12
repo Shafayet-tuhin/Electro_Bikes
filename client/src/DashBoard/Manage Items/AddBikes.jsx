@@ -28,7 +28,7 @@ const AddBike = () => {
     };
 
     // POST request to the backend to add a new bike
-    fetch(`http://localhost:3000/bikes`, {
+    fetch(`https://ebikes-ten.vercel.app/bikes`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

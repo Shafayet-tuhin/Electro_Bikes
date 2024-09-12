@@ -23,7 +23,7 @@ const ManageItems = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:3000/bikes/${item._id}`, {
+                fetch(`https://ebikes-ten.vercel.app/bikes/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

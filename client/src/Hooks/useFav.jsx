@@ -14,7 +14,7 @@ const useFav = () => {
                 return [];
             }
 
-            const res = await fetch(`http://localhost:3000/favorites?email=${user.email}`, {
+            const res = await fetch(`https://ebikes-ten.vercel.app/favorites?email=${user.email}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },

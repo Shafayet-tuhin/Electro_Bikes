@@ -59,7 +59,7 @@ const BikeSpecs = () => {
 
             }
 
-            fetch('http://localhost:3000/cart', {
+            fetch('https://ebikes-ten.vercel.app/cart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -118,7 +118,7 @@ const handleFav = () => {
                 category: category
             };
 
-            fetch('http://localhost:3000/favorites', {
+            fetch('https://ebikes-ten.vercel.app/favorites', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -157,7 +157,7 @@ const handleFav = () => {
   return (
     <div className="mt-32 container mx-auto px-4">
 
-      <Link to='/' className="text-4xl animate-pulse text-slate-600"><IoChevronBackCircleSharp /></Link>
+      <Link to='/menu' className="text-4xl animate-pulse text-slate-600"><IoChevronBackCircleSharp /></Link>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Image Section */}

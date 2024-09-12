@@ -43,7 +43,7 @@ const SingleEbike = ({ item }) => {
                     email: user.email
                 }
 
-                fetch('http://localhost:3000/cart', {
+                fetch('https://ebikes-ten.vercel.app/cart', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -97,7 +97,7 @@ const SingleEbike = ({ item }) => {
                     category: item.category
                 };
 
-                fetch('http://localhost:3000/favorites', {
+                fetch('https://ebikes-ten.vercel.app/favorites', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

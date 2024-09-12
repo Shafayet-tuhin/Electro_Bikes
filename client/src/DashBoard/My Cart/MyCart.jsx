@@ -25,7 +25,7 @@ const MyCart = () => {
 
 
     const handlePlus = (id) => {
-        fetch(`http://localhost:3000/cart/${id}`, {
+        fetch(`https://ebikes-ten.vercel.app/cart/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ const MyCart = () => {
     };
 
     const handleMinus = (id) => {
-        fetch(`http://localhost:3000/cart/${id}`, {
+        fetch(`https://ebikes-ten.vercel.app/cart/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -64,7 +64,7 @@ const MyCart = () => {
             if (result.isConfirmed) {
                 setLoading(true)
 
-                fetch(`http://localhost:3000/cart/${item._id}`, {
+                fetch(`https://ebikes-ten.vercel.app/cart/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const {data : Bikes =[] , isLoading : loading , refetch} = useQuery({
     queryKey : [ 'Bikes' ],
     queryFn : async () => {
-        const res = await fetch('http://localhost:3000/bikes')
+        const res = await fetch('https://ebikes-ten.vercel.app/bikes')
         return res.json()
     },
 

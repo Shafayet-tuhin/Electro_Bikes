@@ -27,7 +27,7 @@ const Register = () => {
             email: email,
         }
 
-        fetch('http://localhost:3000/users', {
+        fetch('https://ebikes-ten.vercel.app/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

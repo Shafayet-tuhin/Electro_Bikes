@@ -48,14 +48,14 @@ const AuthProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:3000/bikes')
+        fetch('https://ebikes-ten.vercel.app/bikes')
             .then(res => res.json())
             .then((data) => setBikeData(data))
     }, [])
 
     useEffect(() => {
                 if (user) {
-                    fetch(`http://localhost:3000/users/admin?email=${user.email}`)
+                    fetch(`https://ebikes-ten.vercel.app/users/admin?email=${user.email}`)
                     .then((res) => res.json())
                     .then((data) => {
                         if (data.role === 'admin') {

@@ -14,7 +14,7 @@ const useCart = () => {
                 return [];
             }
 
-            const res = await fetch(`http://localhost:3000/cart?email=${user.email}`, {
+            const res = await fetch(`https://ebikes-ten.vercel.app/cart?email=${user.email}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },
