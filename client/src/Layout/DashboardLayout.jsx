@@ -85,6 +85,12 @@ const DashboardLayout = () => {
                   All Users
                 </Link>
               </li>
+              <li>
+                <Link className="hover:text-orange-400" to="/dashboard/allpayment">
+                  <FaUsers />
+                  All Users Payment
+                </Link>
+              </li>
             </>
           ) : (
             <>
