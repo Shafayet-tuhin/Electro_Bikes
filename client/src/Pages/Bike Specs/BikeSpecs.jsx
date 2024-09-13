@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
 import { BsHeart } from "react-icons/bs";
@@ -15,6 +15,7 @@ import { AuthContext } from "../../Context/AuthProvider";
 import useCart from "../../Hooks/useCart";
 import useFav from "../../Hooks/useFav";
 import Swal from "sweetalert2";
+import { FaHeart } from "react-icons/fa";
 
 const BikeSpecs = () => {
   const data = useLoaderData();
@@ -23,7 +24,16 @@ const BikeSpecs = () => {
    const {user , setPayment} = useContext(AuthContext)
    const [isPending, cart, refetch]= useCart()
    const [isLoading, fav, refetchFavorites] = useFav()
+   const [isFavorite, setIsFavorite] = useState(false);
+   const [isInCart, setIsInCart] = useState(false);
+
    const navigate = useNavigate()
+
+   useEffect(() => {
+    // Check if the item is in favorites or cart
+    setIsFavorite(fav.some(favItem => favItem.item_id === _id));
+    setIsInCart(cart.some(cartItem => cartItem.item_id === _id));
+}, [fav, cart, _id]);
 
   window.scrollTo({
     top: 0,
@@ -167,8 +177,10 @@ const handleFav = () => {
             alt={name}
             className="w-full h-auto rounded-3xl"
           />
-          <button className="animate-bounce absolute top-2 right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
-            <BsHeart onClick={() => {handleFav()}} className="text-red-500" size={24} />
+          <button className={`animate-bounce absolute top-2 right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100  ${isInCart && 'btn-disabled'}`}> 
+           {
+            isFavorite ? <FaHeart className="text-red-500 text-2xl" /> : <BsHeart onClick={() => {handleFav()}} className={`text-red-500 ${isInCart && 'btn-disabled text-white '}`} size={24} />
+           }
           </button>
         </div>
 
@@ -191,7 +203,9 @@ const handleFav = () => {
 
           {/* Buttons */}
           <div className="flex  space-x-4">
-            <button onClick={() => hadnleCart()} className="btn btn-outline border-gray-200"> <IoMdCart /> Add To Cart</button>
+          {
+              isInCart?    <button className="btn btn-outline border-gray-200 btn-disabled"> <IoMdCart /> Added</button>  :<button onClick={() => hadnleCart()} className="btn btn-outline border-gray-200"> <IoMdCart /> Add To Cart</button>
+          }
             <button onClick={handlePayment} className="btn btn-outline border-gray-200"> <BsFillLightningFill /> Quick Buy</button>
           </div>
         </div>

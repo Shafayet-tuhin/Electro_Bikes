@@ -4,7 +4,7 @@ const router = express.Router()
 const varifyJWT = require('../Middleware/varifyJWT')
 const verifyJWT = require('../Middleware/varifyJWT')
 
-router.get('/',verifyJWT , getFav)
+router.get('/', getFav)
 router.post('/' , postFav)
 router.delete('/:id' , deleteFav)
 

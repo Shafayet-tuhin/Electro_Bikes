@@ -1,10 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
 import axios from 'axios';
+import { AuthContext } from '../../Context/AuthProvider';
 
 const GeminiChat = () => {
+
+  const {user} = useContext(AuthContext);
+
   const [messages, setMessages] = useState([
-    { id: 1, text: 'Hello Friend! Ask me anything about E-Bikes😊', sender: 'bot' }
+    { id: 1, text: `Hello ${user.displayName}! Ask me anything about E-Bikes😊`, sender: 'bot' }
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const chatEndRef = useRef(null);
@@ -29,17 +33,19 @@ const GeminiChat = () => {
       setMessages(prevMessages => [...prevMessages, errorMessage]);
     }
 
-    chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+   
   };
 
   // Scroll to bottom whenever messages change
-  
+  useEffect(() => {
+    chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+  } , [messages]);
 
   return (
-    <div className="flex flex-col lg:h-[50rem] h-[35rem] w-full mx-auto bg-base-200 lg:p-12 p-4 rounded-3xl lg:mt-32 mt-16 mb-16 lg:mb-32">
+    <div className="flex flex-col h-[35rem] w-full mx-auto bg-base-200 lg:p-12 p-4 rounded-3xl lg:mt-32 mt-16 mb-10">
 
       {/* Chat Box */}
-      <div className="flex-1 bg-base-100 shadow-md rounded-lg p-4 flex flex-col space-y-4 overflow-y-auto">
+      <div className="flex-1 bg-base-100 h-1/2 shadow-md rounded-lg p-4 flex flex-col space-y-4 overflow-y-auto">
         {messages.map((message) => (
           <div
             key={message.id}

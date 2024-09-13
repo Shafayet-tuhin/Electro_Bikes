@@ -54,7 +54,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/chat',
-                element: <GeminiChat/>
+                element: <PrivateRoute><GeminiChat/></PrivateRoute>
             }
         ]
     },

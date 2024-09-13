@@ -6,7 +6,7 @@ const useFav = () => {
     const token = localStorage.getItem('token');
     const { user } = useContext(AuthContext);
 
-    const { isLoading, refetch: refetchFavorites, data: fav = [] } = useQuery({
+    const { isLoading:favLoading, refetch: refetchFavorites, data: fav = [] } = useQuery({
         queryKey: ['fav', user?.email],
         queryFn: async () => {
          
@@ -30,7 +30,7 @@ const useFav = () => {
         enabled: !!user?.email, // Only run the query if the email exists
     });
 
-    return [isLoading, fav, refetchFavorites];
+    return [favLoading, fav, refetchFavorites];
 }
 
 export default useFav;

@@ -1,13 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import logo from '../../../assets/Nav/logo.png';
 import { IoIosSearch } from "react-icons/io";
-import { MdOutlineShoppingCart } from "react-icons/md";
-import { FaRegHeart, FaUserCircle } from 'react-icons/fa';
+import { MdAddCall, MdDashboard, MdOutlineShoppingCart } from "react-icons/md";
+import { FaHome, FaRegHeart, FaUserCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 import Swal from 'sweetalert2';
 import useCart from '../../../Hooks/useCart';
 import useFav from '../../../Hooks/useFav';
+import { SiGooglegemini } from 'react-icons/si';
+import { IoBicycleSharp } from 'react-icons/io5';
 
 function Nav() {
     const { user, logOut } = useContext(AuthContext);
@@ -24,11 +26,11 @@ function Nav() {
 
     const NavOptions = (
         <>
-            <li> <Link to='/' className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'>Home</Link></li>
-            <li> <Link to='/menu' onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }) }} className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'>Menu</Link></li>
-            <li> <Link to='/contact' className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'>Contact Us</Link></li>
-            <li> <Link to='/chat' className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'>Ai Chat</Link></li>
-            <li> <Link to='dashboard/home' className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'>DashBoard</Link></li>
+            <li> <Link to='/' className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'><FaHome/>Home</Link></li>
+            <li> <Link to='/menu' onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }) }} className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'><IoBicycleSharp/>Menu</Link></li>
+            <li> <Link to='/contact' className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'><MdAddCall/>Contact Us</Link></li>
+            <li> <Link to='/chat' className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'><SiGooglegemini/> Ai Chat</Link></li>
+            <li> <Link to='dashboard/home' className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'><MdDashboard />DashBoard</Link></li>
         </>
     );
 
