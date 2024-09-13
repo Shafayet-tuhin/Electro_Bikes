@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    animation: {
+      'fade-in': 'fadeIn 0.5s ease-out'
+    },
     fontFamily:{
       abc:["Comfortaa", "sans-serif"]
     }

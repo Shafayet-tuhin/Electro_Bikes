@@ -27,6 +27,7 @@ function Nav() {
             <li> <Link to='/' className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'>Home</Link></li>
             <li> <Link to='/menu' onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }) }} className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'>Menu</Link></li>
             <li> <Link to='/contact' className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'>Contact Us</Link></li>
+            <li> <Link to='/chat' className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'>Ai Chat</Link></li>
             <li> <Link to='dashboard/home' className='font-abc hover:text-orange-500 text-base font-bold btn btn-ghost'>DashBoard</Link></li>
         </>
     );

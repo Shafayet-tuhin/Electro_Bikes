@@ -19,6 +19,7 @@ import AddBikes from "../DashBoard/Manage Items/AddBikes";
 import PrivateRoute from "./PrivateRoute";
 import { AdminRoute } from "./AdminRoute";
 import AllPayment from "../DashBoard/Payment/AllPayment";
+import GeminiChat from "../Pages/Gemini Ai/GeminiChat";
 
 
 export const router = createBrowserRouter([
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact />
+            },
+            {
+                path: '/chat',
+                element: <GeminiChat/>
             }
         ]
     },
