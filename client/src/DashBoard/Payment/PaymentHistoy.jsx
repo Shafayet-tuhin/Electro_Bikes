@@ -1,7 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 import { MdFileDownloadDone } from "react-icons/md";
 import { useQuery } from '@tanstack/react-query';
 import { AuthContext } from '../../Context/AuthProvider';
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 
 const PaymentHistory = () => {
   const { user } = useContext(AuthContext);
@@ -19,8 +21,54 @@ const PaymentHistory = () => {
     }
   });
 
+  // Prepare data for the chart
+  const chartData = useMemo(() => {
+    return paymentInfo.map(payment => ({
+      x: new Date(payment.timestamp).getTime(), // Date as a timestamp
+      y: payment.amount // Payment amount
+    }));
+  }, [paymentInfo]);
+
+  // Highcharts configuration
+  const chartOptions = {
+    chart: {
+      type: 'area',
+    },
+    title: {
+      text: 'Payment History',
+    },
+    xAxis: {
+      type: 'datetime',
+      title: {
+        text: 'Date',
+      },
+    },
+    yAxis: {
+      title: {
+        text: 'Amount ($)',
+      },
+    },
+    series: [{
+      name: 'Amount Paid',
+      data: chartData,
+      color: '#00bcd4',
+    }],
+    tooltip: {
+      xDateFormat: '%Y-%m-%d %H:%M:%S',
+      pointFormat: 'Total: <b>${point.y:.2f}</b>'
+    }
+  };
+
   return (
-    <div className='w-full'>
+    <div className='w-full lg:mt-16 mt-8 '>
+      {/* Highcharts Area chart */}
+      <div className='mb-8'>
+        <HighchartsReact
+          highcharts={Highcharts}
+          options={chartOptions}
+        />
+      </div>
+
       <h2 className='text-2xl font-bold mb-4'>Total Transactions Done: {paymentInfo.length}</h2>
       <div className="overflow-x-auto">
         <table className="table">

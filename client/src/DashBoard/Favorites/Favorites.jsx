@@ -1,25 +1,41 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../Context/AuthProvider'
-
-
 import { MdDelete } from "react-icons/md";
 import Swal from 'sweetalert2';
-import { MdOutlinePriceChange } from "react-icons/md";
 import { SiCashapp } from "react-icons/si";
 import { FaOpencart } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
 import useCart from '../../Hooks/useCart';
 import useFav from '../../Hooks/useFav';
-
-
-
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 
 const Favorites = () => {
-
   const [, , refetch] = useCart()
   const { user, loading } = useContext(AuthContext)
   const [isLoading, fav, refetchFavorites] = useFav()
- 
+
+  // Data for Highchart
+  const categories = fav.reduce((acc, item) => {
+    acc[item.category] = (acc[item.category] || 0) + 1;
+    return acc;
+  }, {});
+
+  const chartOptions = {
+    chart: {
+      type: 'pie'
+    },
+    title: {
+      text: 'Favorite Items by Category'
+    },
+    series: [{
+      name: 'Items',
+      colorByPoint: true,
+      data: Object.keys(categories).map(category => ({
+        name: category,
+        y: categories[category]
+      }))
+    }]
+  };
 
   const handleDelete = (item) => {
     Swal.fire({
@@ -35,7 +51,7 @@ const Favorites = () => {
         fetch(`https://ebikes-ten.vercel.app/favorites/${item._id}`, { method: 'DELETE' })
           .then(res => res.json())
           .then(data => {
-           refetchFavorites()
+            refetchFavorites()
             Swal.fire(
               'Deleted!',
               'Your favorite has been deleted.',
@@ -62,7 +78,6 @@ const Favorites = () => {
           image: item.image,
           item_id: item._id,
           email: user.email
-
         }
 
         fetch('https://ebikes-ten.vercel.app/cart', {
@@ -74,7 +89,6 @@ const Favorites = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data)
             if (data.message === 'success') {
               refetch()
               fetch(`https://ebikes-ten.vercel.app/favorites/${item._id}`, { method: 'DELETE' })
@@ -86,14 +100,12 @@ const Favorites = () => {
                 title: "Added to cart successfully",
                 icon: "success"
               });
-            }
-            else {
+            } else {
               Swal.fire({
                 title: "Error adding to cart",
                 icon: "error"
               });
             }
-
           })
       }
     });
@@ -113,12 +125,16 @@ const Favorites = () => {
 
       </div>
 
-
-
+      {/* Highchart */}
+      <div className="mb-8">
+        <HighchartsReact
+          highcharts={Highcharts}
+          options={chartOptions}
+        />
+      </div>
 
       <div className="overflow-x-auto">
         <table className="table">
-          {/* head */}
           <thead className='lg:text-xl  bg-sky-800 text-white'>
             <tr>
               <th>#</th>
@@ -135,27 +151,18 @@ const Favorites = () => {
               fav.map((item, ind) => {
                 return (
                   <tr key={item._id}>
-                    <td> {ind + 1} </td>
+                    <td>{ind + 1}</td>
                     <td>
-
                       <div className="avatar">
                         <div className="mask mask-squircle h-12 w-12">
                           <img
                             src={item.image}
-                            alt="Avatar Tailwind CSS Component" />
+                            alt="Avatar" />
                         </div>
                       </div>
-
                     </td>
-                    <td>
-                      {item.name}
-                    </td>
-
-                    <td>
-                      {item.category}
-
-                    </td>
-
+                    <td>{item.name}</td>
+                    <td>{item.category}</td>
                     <td className='lg:text-xl font-extrabold text-green-600'>${item.price}</td>
                     <td>
                       {
@@ -164,7 +171,6 @@ const Favorites = () => {
                             Add To Cart
                           </button>
                       }
-
                     </td>
                     <td>
                       {
@@ -173,20 +179,14 @@ const Favorites = () => {
                             <MdDelete />
                           </button>
                       }
-
                     </td>
-
                   </tr>
                 )
               })
             }
-
-
           </tbody>
         </table>
       </div>
-
-
 
     </div>
   )

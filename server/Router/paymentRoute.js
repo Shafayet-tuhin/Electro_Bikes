@@ -4,7 +4,7 @@ const router = express.Router()
 const verifyJWT = require('../Middleware/varifyJWT')
 
 
-router.get('/',verifyJWT , getPayment)
+router.get('/', getPayment)
 router.post('/' , createPayment)
 router.get('/allpayment' , getAllPayments)
 

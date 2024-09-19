@@ -14,6 +14,7 @@ import { AuthContext } from '../Context/AuthProvider';
 import useCart from '../Hooks/useCart';
 import { FaRegHeart } from "react-icons/fa";
 import useFav from '../Hooks/useFav';
+import { SiGooglegemini } from 'react-icons/si';
 
 const DashboardLayout = () => {
   const [isPending, cart, refetch] = useCart();
@@ -142,11 +143,19 @@ const DashboardLayout = () => {
             </Link>
           </li>
           <li>
+            <Link className="hover:text-orange-400" to="/chat">
+            <SiGooglegemini/>
+              Ai Chat
+            </Link>
+          </li>
+         
+          <li>
             <Link className="hover:text-orange-400" to="/contact">
               <RiCustomerService2Line />
               Contact Us
             </Link>
           </li>
+         
         </ul>
       </div>
     </div>
