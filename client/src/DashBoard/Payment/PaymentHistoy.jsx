@@ -73,7 +73,7 @@ const PaymentHistory = () => {
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
-          <thead className='text-xl bg-sky-800 text-white'>
+          <thead className='lg:text-xl bg-sky-800 text-white'>
             <tr>
               <th>#</th>
               <th>Item Names</th>
@@ -83,7 +83,7 @@ const PaymentHistory = () => {
               <th>Date & Time</th>
             </tr>
           </thead>
-          <tbody className='bg-gray-100 text-black font-abc text-lg'>
+          <tbody className='bg-gray-100 text-black font-abc lg:text-lg'>
             {
               paymentInfo.map((payment, index) => (
                 <React.Fragment key={payment._id}>

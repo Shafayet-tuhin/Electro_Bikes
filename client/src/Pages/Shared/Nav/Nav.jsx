@@ -10,6 +10,8 @@ import useCart from '../../../Hooks/useCart';
 import useFav from '../../../Hooks/useFav';
 import { SiGooglegemini } from 'react-icons/si';
 import { IoBicycleSharp } from 'react-icons/io5';
+import {jwtDecode} from 'jwt-decode';
+
 
 function Nav() {
     const { user, logOut } = useContext(AuthContext);
@@ -37,11 +39,51 @@ function Nav() {
     const handleLogout = () => {
         logOut();
         localStorage.removeItem('token');
-        Swal.fire({
-            title: "Logout successfully",
-            icon: 'success',
-        });
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          Toast.fire({
+            icon: "success",
+            title: "Successfully Logged out"
+          });
     };
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            const decodedToken = jwtDecode(token);
+            console.log(decodedToken.exp)
+            const currentTime = Math.floor(Date.now() / 1000); 
+            if (decodedToken.exp < currentTime) {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.onmouseenter = Swal.stopTimer;
+                      toast.onmouseleave = Swal.resumeTimer;
+                    }
+                  });
+                  Toast.fire({
+                    icon: "warning",
+                    title: "Session expired. Please login again"
+                  });
+                logOut(); 
+            }
+        }
+    }, []);
+
 
     const handleTheme = (e) => {
         if (e.target.checked) {
@@ -136,12 +178,12 @@ function Nav() {
                             </li>
                             <li>
                                 <Link to='/dashboard/favorites' className='font-abc hover:text-orange-500 font-bold btn btn-ghost'>
-                                    <FaRegHeart /> Favorites ({fav.length})
+                                    <FaRegHeart /> Favorites <span className='px-2 py-1 bg-cyan-600 text-sm text-white font-bold rounded-xl'>+{fav.length}</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link to='/dashboard/mycart' className='font-abc hover:text-orange-500 font-bold btn btn-ghost'>
-                                    <MdOutlineShoppingCart /> Cart ({cart.length})
+                                    <MdOutlineShoppingCart /> Cart  <span className='px-2 py-1 bg-cyan-600 text-sm text-white font-bold rounded-xl'>+{cart.length}</span>
                                 </Link>
                             </li>
                             <li>

@@ -140,7 +140,7 @@ const Favorites = () => {
               <th>#</th>
               <th>Picture</th>
               <th>Item Name</th>
-              <th>Category</th>
+              <th className='hidden lg:block'>Category</th>
               <th>Price</th>
               <th>Action</th>
               <th>Action</th>
@@ -162,12 +162,12 @@ const Favorites = () => {
                       </div>
                     </td>
                     <td>{item.name}</td>
-                    <td>{item.category}</td>
+                    <td className='hidden lg:block'>{item.category}</td>
                     <td className='lg:text-xl font-extrabold text-green-600'>${item.price}</td>
                     <td>
                       {
                         loading ? <span className="loading loading-ring loading-lg"> </span> :
-                          <button onClick={() => HandleAdd(item)} className='btn btn-outline text-white bg-green-600 hover:text-orange-400 text-sm'>
+                          <button onClick={() => HandleAdd(item)} className='btn btn-outline text-white bg-green-600 hover:text-orange-400 lg:text-sm text-xs'>
                             Add To Cart
                           </button>
                       }

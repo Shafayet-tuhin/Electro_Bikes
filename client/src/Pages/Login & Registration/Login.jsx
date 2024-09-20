@@ -16,7 +16,7 @@ const Login = () => {
     const [pass, setPass] = useState(true);
     const [email, setEmail] = useState('');
 
- 
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -50,9 +50,20 @@ const Login = () => {
                         localStorage.setItem('token', data.token);
                     });
 
-                Swal.fire({
-                    title: "Login Successful",
-                    icon: "success"
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: "Successfully Logged in"
                 });
             })
             .catch((err) => console.log(err));
@@ -92,9 +103,20 @@ const Login = () => {
                         // console.log("JWT", data);
                         localStorage.setItem('token', data.token);
                         navigate('/');
-                        Swal.fire({
-                            title: "Login Successful",
-                            icon: "success"
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: "top-end",
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                                toast.onmouseenter = Swal.stopTimer;
+                                toast.onmouseleave = Swal.resumeTimer;
+                            }
+                        });
+                        Toast.fire({
+                            icon: "success",
+                            title: "Successfully Logged in"
                         });
                     })
                     .catch((err) => console.log(err));
@@ -137,7 +159,7 @@ const Login = () => {
 
             <div className="hero-content flex-col lg:flex-row">
                 <div className="mr-12 w-1/2">
-                    <img src='https://krishnecs.in/wp-content/uploads/2023/09/login-animate-2.gif' alt=""  className='rounded-3xl'/>
+                    <img src='https://krishnecs.in/wp-content/uploads/2023/09/login-animate-2.gif' alt="" className='rounded-3xl' />
                 </div>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
                     <form className="card-body" onSubmit={handleSubmit}>

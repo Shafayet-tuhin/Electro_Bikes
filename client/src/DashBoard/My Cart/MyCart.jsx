@@ -198,7 +198,7 @@ const MyCart = () => {
 
                 <div className="lg:col-span-1 bg-base-200 p-6 rounded-md shadow-sm">
                     <h1 className="font-abc text-3xl font-semibold mb-4">Order details</h1>
-                    <div className="space-y-2 text-lg">
+                    <div className="space-y-2 lg:text-lg text-sm">
                         <div className="flex justify-between">
                             <p>Total Items</p>
                             <p className='flex items-center gap-2'>{cart.length} items</p>

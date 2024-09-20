@@ -62,10 +62,21 @@ const SingleEbike = ({ item }) => {
                     .then((data) => {
                         if (data.message === 'success') {
                             refetchCart();
-                            Swal.fire({
-                                title: "Added to cart successfully",
-                                icon: "success"
-                            });
+                            const Toast = Swal.mixin({
+                                toast: true,
+                                position: "top-end",
+                                showConfirmButton: false,
+                                timer: 1000,
+                                timerProgressBar: true,
+                                didOpen: (toast) => {
+                                  toast.onmouseenter = Swal.stopTimer;
+                                  toast.onmouseleave = Swal.resumeTimer;
+                                }
+                              });
+                              Toast.fire({
+                                icon: "success",
+                                title: "Item added successfully"
+                              });
                             setIsInCart(true);
                         } else {
                             Swal.fire({
@@ -116,10 +127,21 @@ const SingleEbike = ({ item }) => {
                     .then((res) => res.json())
                     .then((data) => {
                         refetchFavorites();
-                        Swal.fire({
-                            title: "Added to favorites successfully",
-                            icon: "success"
-                        });
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: "top-end",
+                            showConfirmButton: false,
+                            timer: 1000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                              toast.onmouseenter = Swal.stopTimer;
+                              toast.onmouseleave = Swal.resumeTimer;
+                            }
+                          });
+                          Toast.fire({
+                            icon: "success",
+                            title: "Added to Favorites"
+                          });
                         setIsFavorite(true);
                     })
                     .catch((err) => console.log(err));
@@ -140,28 +162,28 @@ const SingleEbike = ({ item }) => {
                 />
             )}
 
-            <figure className="px-10 pt-10">
+            <figure className="lg:px-10 px-0 pt-10">
                 <img
                     src={image}
                     alt="Bikes"
-                    className="rounded-xl w-full md:w-[15rem]"
+                    className="rounded-xl w-2/3 md:w-[15rem] "
                 />
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title lg:text-lg font-abc font-extrabold leading-6">{name}</h2>
+                <h2 className="card-title lg:text-lg text-sm font-abc font-extrabold leading-6">{name}</h2>
                 <div className='flex gap-2 md:gap-9 items-center'>
-                    <p className='font-abc text-sm font-extrabold'> Price: <span className='text-orange-600 text-lg animate-pulse'>${price}</span> </p>
-                    <p className='flex items-center font-abc text-sm'> <FaStar className='text-orange-400 text-base' /> ({rating}) </p>
+                    <p className='font-abc lg:text-sm text-xs font-extrabold'> Price: <span className='text-orange-600 lg:text-lg animate-pulse'>${price}</span> </p>
+                    <p className='flex items-center font-abc lg:text-sm text-xs'> <FaStar className='text-orange-400 text-base' /> ({rating}) </p>
                 </div>
                 <div className='flex mt-3 gap-2 justify-center'>
                     <button
-                        className={`btn btn-outline text-lg border-gray-300 ${isInCart ? 'btn-disabled' : ''}`}
+                        className={`btn btn-outline lg:text-lg text-xs border-gray-300 ${isInCart ? 'btn-disabled' : ''}`}
                         onClick={handleCart}
                     >
                         {isInCart ? 'Added' : 'Add Item'}
                     </button>
                     <Link to={`/bikeSpecs/${_id}`} >
-                        <button className='btn btn-outline text-2xl lg:text-4xl border-gray-300'>
+                        <button className='btn btn-outline text-xl lg:text-4xl border-gray-300'>
                             <FcViewDetails />
                         </button>
                     </Link>
