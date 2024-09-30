@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
 import axios from 'axios';
 import { AuthContext } from '../../Context/AuthProvider';
+import ReactMarkdown from 'react-markdown';
 
 const GeminiChat = () => {
 
@@ -54,7 +55,8 @@ const GeminiChat = () => {
             <div
               className={`chat-bubble p-3 rounded-lg shadow-sm lg:text-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-slate-700 text-white'}`}
             >
-              {message.text}
+              {/* Display the message text using ReactMarkdown for Markdown rendering */}
+              <ReactMarkdown>{message.text}</ReactMarkdown>
             </div>
           </div>
         ))}
