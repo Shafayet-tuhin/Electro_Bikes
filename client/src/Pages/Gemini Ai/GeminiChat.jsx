@@ -37,7 +37,7 @@ const GeminiChat = () => {
    
   };
 
-  // Scroll to bottom whenever messages change
+
   useEffect(() => {
     chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
   } , [messages]);
@@ -55,12 +55,11 @@ const GeminiChat = () => {
             <div
               className={`chat-bubble p-3 rounded-lg shadow-sm lg:text-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-slate-700 text-white'}`}
             >
-              {/* Display the message text using ReactMarkdown for Markdown rendering */}
               <ReactMarkdown>{message.text}</ReactMarkdown>
             </div>
           </div>
         ))}
-        <div ref={chatEndRef} /> {/* This empty div helps in scrolling to the bottom */}
+        <div ref={chatEndRef} /> 
       </div>
 
       {/* Input Box */}

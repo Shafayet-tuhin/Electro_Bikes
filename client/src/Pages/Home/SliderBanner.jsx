@@ -16,11 +16,11 @@ const SliderBanner = () => {
         autoPlay={true} 
         infiniteLoop={true} 
         interval={2500} 
-        showThumbs={true} // Hide thumbnail previews
-        showStatus={false} // Hide status indicator
-        width="90%" // Adjust width if necessary
+        showThumbs={true}
+        showStatus={false} 
+        width="90%" 
         dynamicHeight={true} 
-        style={{ maxHeight: '300px', overflow: 'hidden' }} // Set max height for the carousel
+        style={{ maxHeight: '300px', overflow: 'hidden' }} 
       >
           <div>
           <img src={two} alt="Slide 2" />

@@ -14,7 +14,7 @@ const RestPage1 = () => {
 
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-10'>
 
-                {/* Left Section - Beyond the bike */}
+               
                 <div className='flex flex-col bg-[#23272F] py-6 sm:py-10 px-4 sm:px-6 lg:py-[9.3rem] lg:pl-[7.5rem] lg:pr-16'>
                     <p className='font-semibold text-2xl sm:text-3xl lg:text-4xl leading-tight text-white'>
                         <span className='text-[#14C9C9]'>Beyond</span> the bike
@@ -28,7 +28,7 @@ const RestPage1 = () => {
                     <a className='text-[#14C9C9] font-medium text-sm sm:text-base underline' href="https://www.youtube.com/watch?v=CuV2-NQH7UA" target='_blank'>Watch More</a>
                 </div>
 
-                {/* Right Section - Video */}
+              
                 <div className='relative pb-[56.25%] h-0 lg:h-full'>
                     <iframe
                         className='absolute w-full h-full'
@@ -40,7 +40,7 @@ const RestPage1 = () => {
                     ></iframe>
                 </div>
 
-                {/* Second Row - Video */}
+               
                 <div className='relative pb-[56.25%] h-0 lg:h-full'>
                     <iframe
                         className='absolute w-full h-full'
@@ -52,7 +52,7 @@ const RestPage1 = () => {
                     ></iframe>
                 </div>
 
-                {/* Second Row - Trial Section */}
+            
                 <div className='flex flex-col bg-white py-6 sm:py-10 px-4 sm:px-6 lg:py-[9.3rem] lg:pl-[7.5rem] lg:pr-16'>
                     <p className='font-semibold text-2xl sm:text-3xl lg:text-4xl leading-tight text-gray-600'>
                         <span className='text-[#14C9C9]'>21</span> Day At <span className='text-[#14C9C9]'>Home Trial</span>
